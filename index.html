@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucky Lots: Card City — Deal cards. Build your block.</title>
+<meta name="description" content="Lucky Lots is a card-dealing neighborhood builder. Deal cards, raise houses stage by stage, and settle scores with rival builders. Coming soon to Google Play.">
+<meta property="og:title" content="Lucky Lots: Card City">
+<meta property="og:description" content="Deal cards, build your block, and settle scores with rival builders.">
+<meta property="og:image" content="art/feature.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="art/icon-192.png">
+<link rel="apple-touch-icon" href="art/icon-192.png">
+<link rel="preload" as="image" href="frames/frame_001.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HERO: scroll-scrubbed promo video ============ -->
+<section class="scrub-track" id="hero">
+  <div class="scrub-sticky">
+    <div class="scrub-bg"></div>
+    <canvas id="scrub-canvas"></canvas>
+
+    <div class="hero-overlay" id="hero-intro">
+      <img src="art/logo.png" alt="Lucky Lots" class="hero-logo">
+      <p class="hero-tag">Deal cards. Build your block.<br>Settle the score.</p>
+      <div class="scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="chev">&#9660;</div>
+      </div>
+    </div>
+
+    <div class="hero-overlay hero-outro" id="hero-outro">
+      <img src="art/logo.png" alt="Lucky Lots" class="hero-logo small">
+      <p class="hero-tag">Your neighborhood is waiting.</p>
+      <a class="cta-button" href="#features">See the game &#9660;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTRO COPY ============ -->
+<section class="strip strip-dark" id="features">
+  <div class="wrap center">
+    <h2 class="reveal">Deal your way to the best block in town</h2>
+    <p class="lede reveal" data-delay="1">Every deal drops build crews, permits, shields — or trouble.
+    Stack your sets, raise houses stage by stage, and grow a street worth showing off.</p>
+    <div class="card-fan reveal" data-delay="2" aria-hidden="true">
+      <img src="art/card-back.webp" alt="" class="fan-card f1">
+      <img src="art/card-back.webp" alt="" class="fan-card f2">
+      <img src="art/attack-card.webp" alt="" class="fan-card f3">
+      <img src="art/card-back.webp" alt="" class="fan-card f4">
+      <img src="art/card-back.webp" alt="" class="fan-card f5">
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE ROWS ============ -->
+<section class="strip strip-suburb">
+  <div class="wrap feature-row">
+    <div class="phone reveal reveal-left"><img src="art/shot-card_table.webp" alt="Dealing cards at the card table" loading="lazy"></div>
+    <div class="feature-copy reveal reveal-right">
+      <h3>DEAL</h3>
+      <p>Three cards, every pull does something — no dead draws. Build crews,
+      permits, shields, jackpots… and the occasional stick of dynamite.</p>
+    </div>
+  </div>
+  <div class="wrap feature-row flip">
+    <div class="phone reveal reveal-right"><img src="art/shot-my_lot.webp" alt="Building a house on My Lot" loading="lazy"></div>
+    <div class="feature-copy reveal reveal-left">
+      <h3>BUILD</h3>
+      <p>Raise houses stage by stage — foundation to landscaping — and watch
+      your street fill in. Finished houses earn while you're away.</p>
+    </div>
+  </div>
+  <div class="wrap feature-row">
+    <div class="phone reveal reveal-left"><img src="art/shot-live_events.webp" alt="Live events hub" loading="lazy"></div>
+    <div class="feature-copy reveal reveal-right">
+      <h3>EVENTS AROUND THE CLOCK</h3>
+      <p>Rent Craze. Attack Madness. Vault Wheel. Weekend tournaments where you
+      race a rival to the finish. There's always something live.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RIVALS ============ -->
+<section class="strip strip-dark rivals-strip">
+  <div class="wrap center">
+    <h2 class="reveal">You're not building alone</h2>
+    <p class="lede reveal" data-delay="1">Marv, Deb "Bulldozer," and Mr. Grigsby want your lots.
+    They'll raid your builds and skim your tokens while you're away.
+    Shield up — and when your grudge boils over, deliver the comeuppance they've earned.</p>
+    <div class="rival-row">
+      <figure class="rival reveal" data-delay="1">
+        <img src="art/rival-marv.webp" alt="Marv" loading="lazy">
+        <figcaption><strong>Marv</strong><span>"Nice lot. Shame if it got… renovated."</span></figcaption>
+      </figure>
+      <figure class="rival reveal" data-delay="2">
+        <img src="art/rival-deb.webp" alt='Deb "Bulldozer"' loading="lazy">
+        <figcaption><strong>Deb "Bulldozer"</strong><span>"I flatten more before 9am than you build all week."</span></figcaption>
+      </figure>
+      <figure class="rival reveal" data-delay="3">
+        <img src="art/rival-grigsby.webp" alt="Mr. Grigsby" loading="lazy">
+        <figcaption><strong>Mr. Grigsby</strong><span>"Every empty lot on this street will be mine."</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MORE SHOTS ============ -->
+<section class="strip strip-suburb">
+  <div class="wrap feature-row">
+    <div class="phone reveal reveal-left"><img src="art/shot-rivals.webp" alt="Attacking a rival" loading="lazy"></div>
+    <div class="feature-copy reveal reveal-right">
+      <h3>RAID &amp; DEFEND</h3>
+      <p>Wreck a rival's build and pocket the repair bill. Guard your own block
+      with shields and guard dogs — or risk a caper and dodge jail.</p>
+    </div>
+  </div>
+  <div class="wrap feature-row flip">
+    <div class="phone reveal reveal-right"><img src="art/shot-prize_wheel.webp" alt="The prize wheel" loading="lazy"></div>
+    <div class="feature-copy reveal reveal-left">
+      <h3>SPIN &amp; WIN</h3>
+      <p>Feed tickets to the prize wheel, crack safes in the Vault Wheel event,
+      and smash open the Payday garden for buried loot.</p>
+    </div>
+  </div>
+  <div class="wrap feature-row">
+    <div class="phone reveal reveal-left"><img src="art/shot-my_city.webp" alt="My City projects" loading="lazy"></div>
+    <div class="feature-copy reveal reveal-right">
+      <h3>GROW A CITY</h3>
+      <p>Join a city, fund projects with your neighbors, swap cards with your
+      team, and race rival cities in the weekend Build-Off.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="strip cta-strip">
+  <div class="wrap center">
+    <img src="art/logo.png" alt="Lucky Lots" class="cta-logo reveal">
+    <p class="lede reveal" data-delay="1">Free to play. No ads. No account needed.</p>
+    <div class="play-badge reveal" data-delay="2">
+      <span class="badge-soon">COMING SOON TO</span>
+      <span class="badge-store">Google Play</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Michael Driggs · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="mailto:azpilot@gmail.com">Contact</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
