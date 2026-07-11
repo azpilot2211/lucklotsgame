@@ -33,11 +33,48 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
+/* Sharp, full-bleed stage — the video sits on the street, cast plays around it */
 .scrub-bg {
   position: absolute; inset: 0;
-  background: url("../art/suburb-wide.webp") center/cover no-repeat;
-  filter: blur(6px) brightness(0.55) saturate(1.1);
-  transform: scale(1.06);
+  background: url("../art/suburb-wide.webp") center bottom/cover no-repeat;
+}
+
+.scrub-bg::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,18,32,0.35) 0%, rgba(10,18,32,0) 30%, rgba(10,18,32,0) 70%, rgba(10,18,32,0.45) 100%);
+}
+
+/* ---- scroll-driven cast ---- */
+.cast, .actor.front { pointer-events: none; }
+
+.actor {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  will-change: transform;
+  filter: drop-shadow(0 10px 14px rgba(0,0,0,0.35));
+}
+
+#cast-dog     { width: clamp(90px, 11vw, 170px);  bottom: 5%; }
+#cast-kid     { width: clamp(90px, 11vw, 170px);  bottom: 22%; }
+#cast-builder { width: clamp(70px, 8vw, 130px);   bottom: 14%; }
+#cast-burglar { width: clamp(110px, 13vw, 200px); bottom: 4%; }
+#cast-fireman { width: clamp(85px, 10vw, 160px);  bottom: 6%; }
+#cast-truck   { width: clamp(220px, 27vw, 430px); bottom: 1%; }
+
+/* gentle idle bob layered inside the wrapper so it doesn't fight the JS transform */
+.actor > img.bf, .builder-walk { }
+.builder-walk { position: absolute; }
+.builder-walk .bf { position: absolute; inset: 0; width: 100%; }
+.builder-walk .bf1 { opacity: 0; }
+.builder-walk.step .bf0 { opacity: 0; }
+.builder-walk.step .bf1 { opacity: 1; }
+/* keep the wrapper sized by the frame images */
+.builder-walk::before { content: ""; display: block; padding-top: 200%; }
+
+@media (max-width: 760px) {
+  .cast, .actor.front { display: none; }  /* portrait video fills the screen */
 }
 
 #scrub-canvas {

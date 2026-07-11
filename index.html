@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 
@@ -23,7 +23,18 @@
 <section class="scrub-track" id="hero">
   <div class="scrub-sticky">
     <div class="scrub-bg"></div>
+    <div class="cast" aria-hidden="true">
+      <img class="actor" id="cast-dog" src="art/cast/dog_walker.webp" alt="">
+      <img class="actor" id="cast-kid" src="art/cast/kid_bike.webp" alt="">
+      <div class="actor builder-walk" id="cast-builder">
+        <img class="bf bf0" src="art/cast/builder_back_0.webp" alt="">
+        <img class="bf bf1" src="art/cast/builder_back_1.webp" alt="">
+      </div>
+      <img class="actor" id="cast-burglar" src="art/cast/burglar.webp" alt="">
+      <img class="actor" id="cast-fireman" src="art/cast/fireman.webp" alt="">
+    </div>
     <canvas id="scrub-canvas"></canvas>
+    <img class="actor front" id="cast-truck" src="art/cast/firetruck.webp" alt="" aria-hidden="true">
 
     <div class="hero-overlay" id="hero-intro">
       <img src="art/logo.png" alt="Lucky Lots" class="hero-logo">
@@ -156,6 +167,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=2"></script>
 </body>
 </html>
