@@ -5,15 +5,22 @@ Marketing site + legal pages for **Lucky Lots: Card City**.
 Static site, no build step — deploy by serving this directory as-is
 (GitHub Pages: Settings > Pages > Deploy from branch > main / root).
 
-- index.html — landing page. The hero scrubs the promo video (120 JPEG
-  frames drawn to a canvas, driven by scroll position via a rAF poll);
-  after the last frame the page scrolls on into reveal-animated sections.
+- index.html — landing page. The hero scrubs a 15s cinematic
+  neighborhood movie on desktop (frames/desktop/, 150 frames): builders
+  over blueprints, a kid on a big wheel, the burglar spilling coins, the
+  fire truck with a hanging fireman, a block party, and a balloon that
+  escapes up to the LUCKY LOTS banner in the sky. Mobile scrubs the
+  original portrait promo (frames/, 120 frames). One canvas engine,
+  switched at 820px; scroll advances the frames, then the page scrolls
+  on into reveal-animated sections.
 - privacy.html / terms.html — the URLs the Play Console data-safety
   form and store listing point at.
-- frames/ — promo video frames (ffmpeg fps=10, 576x1024; regenerate
-  from assets/demo-video/lucky-lots-promo.mp4 in the game repo).
-- art/ — logo, screenshots, rival portraits, backdrop (exported from
-  the game repo; suburb-wide.webp generated with Higgsfield).
+- frames/desktop/ — hero movie frames (Higgsfield Cinematic Studio,
+  job fa6c8a1a; extracted at fps=10). frames/ — promo frames from
+  assets/demo-video/lucky-lots-promo.mp4 in the game repo.
+- art/scene/keyframes/ — the 5 storyboard stills the movie was
+  generated from (rendered from game art; regeneration recipe).
+- tests/hero-smoke.test.mjs — node tests/hero-smoke.test.mjs
 
 Custom domain: add a CNAME file containing luckylotsgame.com once DNS
 (A records to GitHub Pages / CNAME to azpilot2211.github.io) is set up.

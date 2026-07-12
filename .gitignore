@@ -1,0 +1,4 @@
+# This folder lives inside a Godot project; when the game re-imports, Godot
+# scatters .import sidecars and a cache here. Keep them out of the web repo.
+*.import
+.godot/
