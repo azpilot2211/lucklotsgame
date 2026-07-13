@@ -20,4 +20,14 @@ assert.match(js, /requestAnimationFrame\(loop\)/, "rAF polling drives the scrub"
 assert.ok(existsSync("frames/desktop/frame_001.jpg") && existsSync("frames/desktop/frame_150.jpg"), "desktop frames 1..150 present");
 assert.ok(existsSync("frames/frame_001.jpg") && existsSync("frames/frame_120.jpg"), "mobile frames 1..120 present");
 
+// below-hero parallax: scroll-driven, gated, reduced-motion covered
+const css = readFileSync("css/style.css", "utf8");
+assert.match(css, /@supports \(animation-timeline: view\(\)\)/, "parallax is gated behind @supports");
+assert.match(css, /animation-timeline: view\(\);/, "parallax uses a view() timeline");
+// overflow:hidden ancestors hijack view() timelines — body and .phone must use clip
+assert.match(css, /overflow-x: hidden; overflow-x: clip;/, "body clips x-overflow without becoming a scroll container");
+assert.match(css, /overflow: hidden; overflow: clip;/, ".phone clips without becoming a scroll container");
+assert.match(css, /prefers-reduced-motion[\s\S]*\.card-fan, \.phone img, \.rival img, \.cta-logo \{ animation: none !important; \}/, "reduced motion disables the parallax");
+assert.match(html, /css\/style\.css\?v=8/, "stylesheet cache-buster bumped");
+
 console.log("hero smoke: all assertions passed");

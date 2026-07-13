@@ -2,3 +2,4 @@
 # scatters .import sidecars and a cache here. Keep them out of the web repo.
 *.import
 .godot/
+.claude/

@@ -2,8 +2,8 @@
 
 Marketing site + legal pages for **Lucky Lots: Card City**.
 
-Static site, no build step — deploy by serving this directory as-is
-(GitHub Pages: Settings > Pages > Deploy from branch > main / root).
+Static site, no build step — push to main and Vercel auto-deploys
+to luckylotsgame.com.
 
 - index.html — landing page. The hero scrubs a 15s cinematic
   neighborhood movie on desktop (frames/desktop/, 150 frames): builders
@@ -12,7 +12,8 @@ Static site, no build step — deploy by serving this directory as-is
   escapes up to the LUCKY LOTS banner in the sky. Mobile scrubs the
   original portrait promo (frames/, 120 frames). One canvas engine,
   switched at 820px; scroll advances the frames, then the page scrolls
-  on into reveal-animated sections.
+  on into reveal-animated sections with CSS scroll-driven parallax
+  (animation-timeline: view(); progressive enhancement, no JS).
 - privacy.html / terms.html — the URLs the Play Console data-safety
   form and store listing point at.
 - frames/desktop/ — hero movie frames (Higgsfield Cinematic Studio,
@@ -21,6 +22,3 @@ Static site, no build step — deploy by serving this directory as-is
 - art/scene/keyframes/ — the 5 storyboard stills the movie was
   generated from (rendered from game art; regeneration recipe).
 - tests/hero-smoke.test.mjs — node tests/hero-smoke.test.mjs
-
-Custom domain: add a CNAME file containing luckylotsgame.com once DNS
-(A records to GitHub Pages / CNAME to azpilot2211.github.io) is set up.

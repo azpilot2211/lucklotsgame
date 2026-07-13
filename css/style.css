@@ -15,7 +15,7 @@ body {
   font-family: "Fredoka", "Segoe UI", system-ui, sans-serif;
   background: var(--blue-deep);
   color: var(--text);
-  overflow-x: hidden;
+  overflow-x: hidden; overflow-x: clip; /* clip: no scroll container, keeps view() timelines on the root scroller */
 }
 
 img { max-width: 100%; display: block; }
@@ -121,7 +121,7 @@ h2 {
 .feature-row.flip { flex-direction: row-reverse; }
 .phone {
   flex: 0 0 min(300px, 42vw);
-  border-radius: 26px; overflow: hidden; border: 6px solid #0d1a2c;
+  border-radius: 26px; overflow: hidden; overflow: clip; border: 6px solid #0d1a2c;
   box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 2px rgba(246,185,59,0.55);
 }
 .feature-copy { flex: 1; }
@@ -176,9 +176,29 @@ footer a:hover { text-decoration: underline; }
 .reveal[data-delay="2"] { transition-delay: 0.24s; }
 .reveal[data-delay="3"] { transition-delay: 0.36s; }
 
+/* ============ SCROLL PARALLAX (progressive enhancement) ============ */
+/* Elements drift as they cross the viewport. Applied to inner imgs where the
+   parent already animates its transform via .reveal, so the two never fight. */
+@supports (animation-timeline: view()) {
+  @keyframes plx-drift {
+    from { transform: translateY(var(--plx)) scale(var(--plx-scale, 1)); }
+    to   { transform: translateY(calc(-1 * var(--plx))) scale(var(--plx-scale, 1)); }
+  }
+  .card-fan, .phone img, .rival img, .cta-logo {
+    animation: plx-drift linear both;
+    animation-timeline: view();
+  }
+  .card-fan  { --plx: 26px; }
+  .phone img { --plx: 22px; --plx-scale: 1.12; } /* scale keeps the drift covered inside the frame */
+  .rival img { --plx: 12px; }
+  .rival:nth-child(2) img { --plx: -12px; }      /* middle rival drifts against the outer two */
+  .cta-logo  { --plx: 30px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal, .fan-card { transition: none !important; transform: none !important; opacity: 1 !important; }
   .scroll-hint .chev { animation: none !important; }
+  .card-fan, .phone img, .rival img, .cta-logo { animation: none !important; }
 }
 
 /* ============ LEGAL PAGES ============ */
