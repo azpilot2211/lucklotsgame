@@ -18,7 +18,7 @@ body {
   overflow-x: hidden; overflow-x: clip; /* clip: no scroll container, keeps view() timelines on the root scroller */
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 
 /* ============ HERO SHELL ============ */
 .scrub-track { height: 560vh; position: relative; }
@@ -177,28 +177,37 @@ footer a:hover { text-decoration: underline; }
 .reveal[data-delay="3"] { transition-delay: 0.36s; }
 
 /* ============ SCROLL PARALLAX (progressive enhancement) ============ */
-/* Elements drift as they cross the viewport. Applied to inner imgs where the
-   parent already animates its transform via .reveal, so the two never fight. */
-@supports (animation-timeline: view()) {
-  @keyframes plx-drift {
-    from { transform: translateY(var(--plx)) scale(var(--plx-scale, 1)); }
-    to   { transform: translateY(calc(-1 * var(--plx))) scale(var(--plx-scale, 1)); }
+/* Layered speeds as things cross the viewport: strip backgrounds are the slow
+   layer (fixed street bg), content wraps drift faster, inner imgs faster
+   still. Pure view() timelines, no JS. Drift is applied to inner imgs where
+   the parent animates its transform via .reveal, so the two never fight. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    @keyframes plx-drift {
+      from { transform: translateY(var(--plx)) rotate(var(--plx-rot, 0deg)) scale(var(--plx-s0, var(--plx-s, 1))); }
+      to   { transform: translateY(calc(-1 * var(--plx))) rotate(calc(-1 * var(--plx-rot, 0deg))) scale(var(--plx-s1, var(--plx-s, 1))); }
+    }
+    .feature-row, .strip-dark > .wrap, .cta-strip > .wrap,
+    .card-fan, .phone, .rival img, .cta-logo {
+      animation: plx-drift linear both;
+      animation-timeline: view();
+    }
+    /* content layer — outruns the strip backgrounds */
+    .feature-row        { --plx: 64px; }
+    .strip-dark > .wrap { --plx: 36px; }
+    .cta-strip > .wrap  { --plx: 12px; }
+    /* inner layer — rides on top of the content layer */
+    .card-fan  { --plx: 40px; }
+    .phone     { --plx: 26px; --plx-rot: 1.2deg; } /* whole frame drifts+rocks; rides on the row's drift */
+    .rival img { --plx: 16px; }
+    .rival:nth-child(2) img { --plx: -16px; } /* middle rival drifts against the outer two */
+    .cta-logo  { --plx: 20px; --plx-s0: 0.92; --plx-s1: 1.08; }   /* swells as it rises */
   }
-  .card-fan, .phone img, .rival img, .cta-logo {
-    animation: plx-drift linear both;
-    animation-timeline: view();
-  }
-  .card-fan  { --plx: 26px; }
-  .phone img { --plx: 22px; --plx-scale: 1.12; } /* scale keeps the drift covered inside the frame */
-  .rival img { --plx: 12px; }
-  .rival:nth-child(2) img { --plx: -12px; }      /* middle rival drifts against the outer two */
-  .cta-logo  { --plx: 30px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal, .fan-card { transition: none !important; transform: none !important; opacity: 1 !important; }
   .scroll-hint .chev { animation: none !important; }
-  .card-fan, .phone img, .rival img, .cta-logo { animation: none !important; }
 }
 
 /* ============ LEGAL PAGES ============ */

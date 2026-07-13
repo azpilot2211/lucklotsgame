@@ -22,12 +22,21 @@ assert.ok(existsSync("frames/frame_001.jpg") && existsSync("frames/frame_120.jpg
 
 // below-hero parallax: scroll-driven, gated, reduced-motion covered
 const css = readFileSync("css/style.css", "utf8");
-assert.match(css, /@supports \(animation-timeline: view\(\)\)/, "parallax is gated behind @supports");
+assert.match(css, /@media \(prefers-reduced-motion: no-preference\) \{\s*@supports \(animation-timeline: view\(\)\)/, "parallax is gated behind reduced-motion AND @supports");
 assert.match(css, /animation-timeline: view\(\);/, "parallax uses a view() timeline");
 // overflow:hidden ancestors hijack view() timelines — body and .phone must use clip
 assert.match(css, /overflow-x: hidden; overflow-x: clip;/, "body clips x-overflow without becoming a scroll container");
 assert.match(css, /overflow: hidden; overflow: clip;/, ".phone clips without becoming a scroll container");
-assert.match(css, /prefers-reduced-motion[\s\S]*\.card-fan, \.phone img, \.rival img, \.cta-logo \{ animation: none !important; \}/, "reduced motion disables the parallax");
-assert.match(html, /css\/style\.css\?v=8/, "stylesheet cache-buster bumped");
+assert.match(html, /css\/style\.css\?v=9/, "stylesheet cache-buster bumped");
+
+// every lazy img declares its size — a 0x0 lazy img inside overflow:clip never
+// intersects, so Chrome never loads it (the images-gone-below-the-fold bug)
+const lazyImgs = html.match(/<img [^>]*loading="lazy"[^>]*>/g) || [];
+assert.ok(lazyImgs.length >= 9, "lazy images present");
+for (const tag of lazyImgs) {
+  assert.match(tag, /width="\d+"/, `lazy img missing width: ${tag}`);
+  assert.match(tag, /height="\d+"/, `lazy img missing height: ${tag}`);
+}
+assert.match(css, /img \{ max-width: 100%; height: auto; display: block; \}/, "img height:auto keeps attr aspect ratio responsive");
 
 console.log("hero smoke: all assertions passed");
