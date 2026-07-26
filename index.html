@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
 
@@ -141,11 +141,28 @@
 </section>
 
 <!-- ============ CTA ============ -->
-<section class="strip cta-strip">
+<section class="strip cta-strip" id="signup">
   <div class="wrap center">
     <img src="art/logo.png" alt="Lucky Lots" width="720" height="297" class="cta-logo reveal">
     <p class="lede reveal" data-delay="1">Free to play. No ads. No account needed.</p>
-    <div class="play-badge reveal" data-delay="2">
+
+    <div class="signup reveal" data-delay="2">
+      <h2>Be the first to play</h2>
+      <p class="signup-sub">We're lining up the first testers now. Drop your email and we'll
+      send your invite the moment the test opens — that's the only reason we'll write.</p>
+      <form class="signup-form" id="signup-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f2e54789-fb18-4fb0-90eb-9c901601c641">
+        <input type="hidden" name="subject" value="New Lucky Lots tester signup">
+        <input type="hidden" name="from_name" value="Lucky Lots waitlist">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input class="signup-input" type="email" name="email" required autocomplete="email"
+               inputmode="email" placeholder="you@email.com" aria-label="Your email address">
+        <button class="cta-button" type="submit">Notify me</button>
+      </form>
+      <p class="signup-note" id="signup-msg" role="status">No spam, ever. Leave the list anytime. <a href="privacy.html">Privacy</a>.</p>
+    </div>
+
+    <div class="play-badge reveal" data-delay="3">
       <span class="badge-soon">COMING SOON TO</span>
       <span class="badge-store">Google Play</span>
     </div>
@@ -159,5 +176,41 @@
 </footer>
 
 <script src="js/main.js?v=7"></script>
+<script>
+/* Waitlist signup → Web3Forms. Submits over fetch so the visitor never leaves
+   the page; on success we swap the form for a confirmation and fire the Meta
+   Pixel Lead event (pixel is already initialised in <head>). */
+(function () {
+  var form = document.getElementById("signup-form");
+  if (!form) return;
+  var msg = document.getElementById("signup-msg");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var btn = form.querySelector("button");
+    btn.disabled = true; btn.textContent = "Sending…";
+    msg.classList.remove("err");
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+    }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j.success) {
+        form.style.display = "none";
+        msg.innerHTML = "🎉 You're on the list! We'll email you the moment the test opens.";
+        msg.classList.add("ok");
+        if (window.fbq) fbq("track", "Lead");
+      } else {
+        btn.disabled = false; btn.textContent = "Notify me";
+        msg.textContent = "That didn't go through — please try again, or email azpilot@gmail.com.";
+        msg.classList.add("err");
+      }
+    }).catch(function () {
+      btn.disabled = false; btn.textContent = "Notify me";
+      msg.textContent = "Network hiccup — please try again in a moment.";
+      msg.classList.add("err");
+    });
+  });
+})();
+</script>
 </body>
 </html>
