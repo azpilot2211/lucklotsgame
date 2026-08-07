@@ -17,6 +17,9 @@ body {
   color: var(--text);
   overflow-x: hidden; overflow-x: clip; /* clip: no scroll container, keeps view() timelines on the root scroller */
 }
+a.white { color: #fff; text-decoration: none; }
+a.white:hover { text-decoration: underline; }
+
 
 img { max-width: 100%; height: auto; display: block; }
 
