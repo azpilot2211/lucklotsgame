@@ -2,6 +2,9 @@
   --navy-950: #07182d;
   --navy-900: #0d2440;
   --navy-800: #153555;
+  --navy-700: #264b6c;
+  --navy-400: #7c96ad;
+  --navy-200: #cfdae3;
   --sky-500: #4eaae7;
   --sky-200: #c9ecff;
   --gold-500: #f6b93b;
@@ -9,6 +12,7 @@
   --cream-100: #fff8e8;
   --cream-200: #f7ead0;
   --coral-500: #c83f38;
+  --coral-600: #a92f2a;
   --green-500: #23885a;
   --ink: #10243a;
   --white: #ffffff;
@@ -526,6 +530,93 @@ p {
   margin-top: 1.5rem;
 }
 
+.page-hero {
+  padding-block: clamp(2.5rem, 8vw, 5rem);
+}
+
+.page-hero-inner {
+  display: grid;
+  gap: clamp(2rem, 6vw, 4rem);
+  align-items: center;
+}
+
+.guide-hero-art {
+  justify-self: center;
+  width: min(100%, 28rem);
+}
+
+.guide-hero-art img {
+  width: 100%;
+  max-height: 34rem;
+  object-fit: contain;
+  filter: drop-shadow(0 1.25rem 1.75rem rgb(12 31 55 / 22%));
+}
+
+.breadcrumbs,
+.local-toc ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  list-style: none;
+  color: var(--navy-700);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.5rem;
+  color: var(--navy-400);
+}
+
+.guide-layout {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.local-toc {
+  padding: 1.25rem;
+  border: 1px solid var(--navy-200);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.local-toc ol {
+  display: grid;
+  margin: 0.8rem 0 0;
+  font-weight: 600;
+}
+
+.guide-sections {
+  max-width: 48rem;
+}
+
+.guide-sections > section {
+  scroll-margin-top: 7rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid var(--navy-200);
+}
+
+.guide-sections > section + section {
+  padding-top: 2.75rem;
+}
+
+.guide-sections h2 {
+  margin-top: 0.35rem;
+}
+
+.guide-sections li::marker {
+  color: var(--coral-600);
+}
+
+.related-guides {
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
 .prose ul,
 .prose ol {
   display: grid;
@@ -613,7 +704,8 @@ p {
   }
 
   .hero-inner,
-  .feature-row {
+  .feature-row,
+  .page-hero-inner {
     grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.9fr);
   }
 
@@ -636,6 +728,15 @@ p {
   .guide-grid,
   .article-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .guide-layout {
+    grid-template-columns: minmax(13rem, 0.34fr) minmax(0, 1fr);
+  }
+
+  .local-toc {
+    position: sticky;
+    top: 6.5rem;
   }
 }
 

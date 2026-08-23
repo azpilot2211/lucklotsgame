@@ -7,12 +7,68 @@ async function readJson(rootDir, relativePath) {
 }
 
 export async function loadContent(rootDir) {
-  const [site, home, assets] = await Promise.all([
+  const [site, home, assets, guides, ruleSource] = await Promise.all([
     readJson(rootDir, "content/site.json"),
     readJson(rootDir, "content/home.json"),
     readJson(rootDir, "content/assets.json"),
+    readJson(rootDir, "content/guides.json"),
+    readFile(path.join(rootDir, "content/how-to-play/source.txt"), "utf8"),
   ]);
-  return { site, home, assets };
+  return { site, home, assets, guides, ruleSections: parseRuleSections(ruleSource) };
+}
+
+const STALE_PURCHASE_SENTENCE = "Test purchases use the displayed price but are free until launch; no real money is charged.";
+const LIVE_PURCHASE_SENTENCE = "Lucky Lots is live. The Shop displays real prices for available in-app purchases; review the item and displayed cost before confirming a purchase.";
+const GROUP_LABELS = new Set(["Basics", "Building", "Rivals", "More"]);
+
+function transformApprovedStaleSentence(value) {
+  return value.replace(STALE_PURCHASE_SENTENCE, LIVE_PURCHASE_SENTENCE);
+}
+
+export function parseRuleSections(text) {
+  const lines = String(text).replace(/\r\n?/g, "\n").split("\n");
+  const rawSections = [];
+  let current = null;
+  let currentGroup = "Basics";
+
+  for (const line of lines) {
+    const value = line.trim();
+    const heading = value.match(/^(\d+)\.\s+(.+)$/);
+    if (heading) {
+      if (current) rawSections.push(current);
+      current = {
+        number: Number(heading[1]),
+        title: heading[2],
+        group: currentGroup,
+        contentLines: [],
+      };
+      continue;
+    }
+    if (GROUP_LABELS.has(value)) {
+      currentGroup = value;
+      continue;
+    }
+    if (current) current.contentLines.push(line.replace(/\s+$/g, ""));
+  }
+  if (current) rawSections.push(current);
+
+  const numbers = rawSections.map(({ number }) => number);
+  const expected = Array.from({ length: 12 }, (_, index) => index + 1);
+  if (numbers.length !== 12 || numbers.some((number, index) => number !== expected[index])) {
+    throw new Error(`How to Play must contain numbered sections 1 through 12 exactly once; found ${numbers.join(", ")}`);
+  }
+
+  return rawSections.map(({ number, title, group, contentLines }) => {
+    const blocks = contentLines.join("\n").trim().split(/\n\s*\n/).filter(Boolean);
+    const paragraphs = [];
+    const listItems = [];
+    for (const block of blocks) {
+      const blockLines = block.split("\n").map((line) => transformApprovedStaleSentence(line.trim())).filter(Boolean);
+      if (blockLines.length === 1) paragraphs.push(blockLines[0]);
+      else listItems.push(...blockLines);
+    }
+    return { number, title, group, paragraphs, listItems };
+  });
 }
 
 function requireText(value, field) {
@@ -32,5 +88,13 @@ export function validateContent(content) {
   }
   requireText(content?.home?.headline, "home.headline");
   requireText(content?.home?.description, "home.description");
+  if (!Array.isArray(content.guides) || content.guides.length !== 6) {
+    throw new Error("guides must contain six topic mappings");
+  }
+  const mappedSections = content.guides.flatMap((guide) => guide.sourceSections).sort((a, b) => a - b);
+  const expectedSections = Array.from({ length: 12 }, (_, index) => index + 1);
+  if (JSON.stringify(mappedSections) !== JSON.stringify(expectedSections)) {
+    throw new Error("guides must map every How to Play section exactly once");
+  }
   return content;
 }

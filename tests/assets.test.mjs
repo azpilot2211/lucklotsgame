@@ -46,3 +46,10 @@ test("stylesheet includes accessibility and motion safeguards", async () => {
   assert.doesNotMatch(css, /background-attachment:\s*fixed/);
   assert.doesNotMatch(css, /animation-timeline/);
 });
+
+test("every custom property reference has a declared value", async () => {
+  const css = await readFile("src/css/site.css", "utf8");
+  const declarations = new Set([...css.matchAll(/(--[a-z0-9-]+)\s*:/g)].map((match) => match[1]));
+  const references = new Set([...css.matchAll(/var\((--[a-z0-9-]+)/g)].map((match) => match[1]));
+  assert.deepEqual([...references].filter((name) => !declarations.has(name)), []);
+});
