@@ -46,7 +46,7 @@ export function renderLayout({ site, page, body, structuredData = [] }) {
       ${renderPlayCta({ site, label: "Google Play", placement: "header", className: "header-cta" })}
     </div>
   </header>
-  <main id="main">${body}</main>
+  <main id="main" tabindex="-1">${body}</main>
   <footer class="site-footer">
     <div class="footer-inner">
       <p>© 2026 ${escapeHtml(site.shortName)}. Built by ${escapeHtml(site.developer || "CapeCoder")}.</p>

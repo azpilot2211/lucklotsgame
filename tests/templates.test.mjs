@@ -32,7 +32,7 @@ test("layout emits canonical metadata and accessible landmarks", () => {
   assert.match(html, /<html lang="en">/);
   assert.match(html, /<link rel="canonical" href="https:\/\/luckylotsgame\.com\/how-to-play\/">/);
   assert.match(html, /<a class="skip-link" href="#main">Skip to content<\/a>/);
-  assert.match(html, /<main id="main">/);
+  assert.match(html, /<main id="main" tabindex="-1">/);
   assert.match(html, /<meta name="description" content="Learn the real Lucky Lots rules\.">/);
   assert.match(html, /<button[^>]+data-nav-toggle[^>]+aria-controls="site-nav"[^>]+aria-expanded="false"/);
 });

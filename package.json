@@ -6,10 +6,18 @@
     "build": "node scripts/build.mjs",
     "optimize:images": "node scripts/optimize-images.mjs",
     "test": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "test:browser": "node --test --test-concurrency=1 tests/browser/*.test.mjs",
     "validate": "node scripts/validate-site.mjs",
-    "check": "npm run build && npm test && npm run validate"
+    "check": "npm run build && npm test && npm run validate",
+    "serve": "node scripts/serve.mjs",
+    "lighthouse": "node scripts/run-lighthouse.mjs",
+    "verify": "npm run check && npm run test:browser && npm run lighthouse"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@lhci/cli": "0.15.1",
+    "lighthouse": "13.4.1",
+    "playwright": "1.62.1",
     "sharp": "0.35.3"
   }
 }

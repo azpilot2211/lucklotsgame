@@ -1,24 +1,20 @@
 # luckylotsgame.com
 
-Marketing site + legal pages for **Lucky Lots: Card City**.
+Generated static marketing, guide, news, support, and legal site for **Lucky Lots: Card City**.
 
-Static site, no build step — push to main and Vercel auto-deploys
-to luckylotsgame.com.
+## Work locally
 
-- index.html — landing page. The hero scrubs a 15s cinematic
-  neighborhood movie on desktop (frames/desktop/, 150 frames): builders
-  over blueprints, a kid on a big wheel, the burglar spilling coins, the
-  fire truck with a hanging fireman, a block party, and a balloon that
-  escapes up to the LUCKY LOTS banner in the sky. Mobile scrubs the
-  original portrait promo (frames/, 120 frames). One canvas engine,
-  switched at 820px; scroll advances the frames, then the page scrolls
-  on into reveal-animated sections with CSS scroll-driven parallax
-  (animation-timeline: view(); progressive enhancement, no JS).
-- privacy.html / terms.html — the URLs the Play Console data-safety
-  form and store listing point at.
-- frames/desktop/ — hero movie frames (Higgsfield Cinematic Studio,
-  job fa6c8a1a; extracted at fps=10). frames/ — promo frames from
-  assets/demo-video/lucky-lots-promo.mp4 in the game repo.
-- art/scene/keyframes/ — the 5 storyboard stills the movie was
-  generated from (rendered from game art; regeneration recipe).
-- tests/hero-smoke.test.mjs — node tests/hero-smoke.test.mjs
+```powershell
+npm install
+npm run optimize:images
+npm run build
+npm run check
+npm run test:browser
+npm run lighthouse
+```
+
+`npm run build` recreates ignored `dist/`; do not edit generated HTML, CSS, JavaScript, robots, or sitemap files there. Templates live in `src/templates`, authored content in `src/content`, and build descriptors in `scripts/lib/pages.mjs`. Guide copy maps to `src/content/how-to-play-source.txt`, derived from the approved in-game rules.
+
+To publish factual news, add a JSON record with slug, title, description, published/modified dates, image key, excerpt, sections, and related guide, then run the complete checks. Do not publish unverified roadmap claims.
+
+Vercel runs `npm run check` and publishes `dist/` according to `vercel.json`. After deployment, verify `/sitemap.xml`, `/robots.txt`, `/app-ads.txt`, legal URLs, response headers, structured data, and the Google Play handoff.

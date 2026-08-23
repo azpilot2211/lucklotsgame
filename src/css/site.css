@@ -349,6 +349,26 @@ p {
   width: 100%;
 }
 
+@media (max-width: 479px) {
+  .hero-inner {
+    gap: 2rem;
+    padding-block: 1.5rem 2.5rem;
+  }
+
+  .hero-copy {
+    gap: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 12vw, 2.75rem);
+  }
+
+  .hero .lede {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+}
+
 .proof-strip {
   background: var(--navy-900);
   color: var(--white);
@@ -748,7 +768,6 @@ p {
 }
 
 .js [data-reveal]:not(.is-visible) {
-  opacity: 0;
   transform: translateY(16px);
 }
 
