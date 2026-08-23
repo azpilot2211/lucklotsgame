@@ -28,8 +28,8 @@ test("build publishes a small client and layout establishes enhancement state be
   const result = spawnSync(process.execPath, ["scripts/build.mjs"], { encoding: "utf8" });
   assert.equal(result.status, 0, result.stderr);
   const [html, client] = await Promise.all([
-    readFile("index.html", "utf8"),
-    readFile("js/main.js", "utf8"),
+    readFile("dist/index.html", "utf8"),
+    readFile("dist/js/main.js", "utf8"),
   ]);
   assert.ok(client.length < 8 * 1024, `client is ${client.length} bytes`);
   assert.ok(html.indexOf('classList.add("js")') < html.indexOf('<link rel="stylesheet"'), "JS class hook must precede CSS");

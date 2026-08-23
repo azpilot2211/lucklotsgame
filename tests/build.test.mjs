@@ -39,14 +39,14 @@ test("build writes a deterministic public homepage", async () => {
     encoding: "utf8",
   });
   assert.equal(first.status, 0, first.stderr);
-  const firstHtml = await readFile("index.html", "utf8");
+  const firstHtml = await readFile("dist/index.html", "utf8");
 
   const second = spawnSync(process.execPath, ["scripts/build.mjs"], {
     cwd: process.cwd(),
     encoding: "utf8",
   });
   assert.equal(second.status, 0, second.stderr);
-  const secondHtml = await readFile("index.html", "utf8");
+  const secondHtml = await readFile("dist/index.html", "utf8");
 
   assert.equal(secondHtml, firstHtml);
   assert.match(firstHtml, /<!doctype html>/);

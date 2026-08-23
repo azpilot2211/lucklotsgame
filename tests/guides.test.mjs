@@ -57,7 +57,7 @@ test("generated guide library preserves critical gameplay facts and removes only
     "how-to-play/cities-and-events/index.html",
     "how-to-play/shop-saves-safety/index.html",
   ];
-  const html = (await Promise.all(pages.map((page) => readFile(page, "utf8")))).join("\n");
+  const html = (await Promise.all(pages.map((page) => readFile(`dist/${page}`, "utf8")))).join("\n");
   assert.match(html, /Standard, Big, and Mega deals cost 1, 3, and 9 Tickets/);
   assert.match(html, /You can hold up to 30 Chips/);
   assert.match(html, /A direct Small Attack costs 10,000 Tokens/);
@@ -71,7 +71,7 @@ test("generated guide library preserves critical gameplay facts and removes only
 test("each guide page has one h1, breadcrumbs, useful content before its Play CTA, and schema", async () => {
   build();
   for (const slug of ["cards-and-deals", "building-and-rent", "rivals-and-jail", "bonus-games", "cities-and-events", "shop-saves-safety"]) {
-    const html = await readFile(`how-to-play/${slug}/index.html`, "utf8");
+    const html = await readFile(`dist/how-to-play/${slug}/index.html`, "utf8");
     assert.equal((html.match(/<h1\b/g) || []).length, 1, slug);
     assert.match(html, /aria-label="Breadcrumb"/, slug);
     assert.match(html, /"@type":"BreadcrumbList"/, slug);
@@ -82,6 +82,6 @@ test("each guide page has one h1, breadcrumbs, useful content before its Play CT
 
 test("How to Play hub advertises a desktop image slot no wider than its CSS cap", async () => {
   build();
-  const html = await readFile("how-to-play/index.html", "utf8");
+  const html = await readFile("dist/how-to-play/index.html", "utf8");
   assert.match(html, /class="guide-hero-art"><picture><source sizes="\(min-width: 900px\) 448px, calc\(100vw - 2rem\)"/);
 });

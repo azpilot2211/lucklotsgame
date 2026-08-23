@@ -18,8 +18,8 @@ function jsonLdRecords(html) {
 
 test("news index links to the one verified dated update and homepage surfaces it", async () => {
   build();
-  const news = await readFile("news/index.html", "utf8");
-  const home = await readFile("index.html", "utf8");
+  const news = await readFile("dist/news/index.html", "utf8");
+  const home = await readFile("dist/index.html", "utf8");
   for (const html of [news, home]) {
     assert.match(html, /href="\/news\/my-block-is-a-real-street\/"/);
     assert.match(html, /My Block is a real street now/);
@@ -30,7 +30,7 @@ test("news index links to the one verified dated update and homepage surfaces it
 
 test("news article keeps visible facts and matching Article schema", async () => {
   build();
-  const html = await readFile("news/my-block-is-a-real-street/index.html", "utf8");
+  const html = await readFile("dist/news/my-block-is-a-real-street/index.html", "utf8");
   assert.match(html, /<article\b/);
   assert.match(html, /<h1>My Block is a real street now<\/h1>/);
   assert.match(html, /Published <time datetime="2026-08-21">August 21, 2026<\/time>/);
@@ -52,7 +52,7 @@ test("news article keeps visible facts and matching Article schema", async () =>
 
 test("support answers the live game's purchase, ad, save, and contact questions", async () => {
   build();
-  const html = await readFile("support/index.html", "utf8");
+  const html = await readFile("dist/support/index.html", "utf8");
   assert.match(html, /Rewarded ads are optional/);
   assert.match(html, /in-app purchases/i);
   assert.match(html, /saves locally first/i);
@@ -66,8 +66,8 @@ test("support answers the live game's purchase, ad, save, and contact questions"
 
 test("shared legal pages preserve substantive protections while correcting stale launch facts", async () => {
   build();
-  const privacy = await readFile("privacy.html", "utf8");
-  const terms = await readFile("terms.html", "utf8");
+  const privacy = await readFile("dist/privacy.html", "utf8");
+  const terms = await readFile("dist/terms.html", "utf8");
   for (const [path, html] of [["/privacy.html", privacy], ["/terms.html", terms]]) {
     assert.match(html, /Skip to content/);
     assert.match(html, new RegExp(`rel="canonical" href="https:\\/\\/luckylotsgame\\.com${path.replace(".", "\\.")}"`));
@@ -93,7 +93,7 @@ test("shared legal pages preserve substantive protections while correcting stale
 test("content detail pages offer breadcrumbs and a useful next path", async () => {
   build();
   for (const page of ["news/my-block-is-a-real-street/index.html", "support/index.html", "privacy.html", "terms.html"]) {
-    const html = await readFile(page, "utf8");
+    const html = await readFile(`dist/${page}`, "utf8");
     assert.match(html, /aria-label="Breadcrumb"/, page);
     assert.match(html, /(?:data-play-placement=|href="\/how-to-play\/"|href="\/support\/")/, page);
   }

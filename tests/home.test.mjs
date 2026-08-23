@@ -13,7 +13,7 @@ function build() {
 
 test("homepage resolves the promise and Google Play action above the hero art", async () => {
   build();
-  const html = await readFile("index.html", "utf8");
+  const html = await readFile("dist/index.html", "utf8");
   assert.match(html, /<h1>Deal cards\. Build houses\. Take the whole street\.<\/h1>/);
   assert.match(html, /data-play-placement="hero"/);
   assert.match(html, /href="#how-it-plays"/);
@@ -26,7 +26,7 @@ test("homepage resolves the promise and Google Play action above the hero art", 
 
 test("homepage tells the complete conversion story in order", async () => {
   build();
-  const html = await readFile("index.html", "utf8");
+  const html = await readFile("dist/index.html", "utf8");
   const headings = [
     "One hand can change the whole block.",
     "This is the game—not a mockup.",
@@ -49,7 +49,7 @@ test("homepage tells the complete conversion story in order", async () => {
 
 test("homepage uses authentic optimized art without stale launch claims or frame requests", async () => {
   build();
-  const html = await readFile("index.html", "utf8");
+  const html = await readFile("dist/index.html", "utf8");
   assert.match(html, /\/art\/optimized\/hero-640\.avif/);
   assert.match(html, /\/art\/optimized\/card-table-360\.avif/);
   assert.match(html, /\/art\/optimized\/rival-marv\.webp/);
@@ -60,7 +60,7 @@ test("homepage uses authentic optimized art without stale launch claims or frame
 
 test("homepage structured data describes a free Android game without ratings", async () => {
   build();
-  const html = await readFile("index.html", "utf8");
+  const html = await readFile("dist/index.html", "utf8");
   assert.match(html, /"@type":\["VideoGame","MobileApplication"\]/);
   assert.match(html, /"operatingSystem":"Android"/);
   assert.match(html, /"price":"0"/);
@@ -69,6 +69,6 @@ test("homepage structured data describes a free Android game without ratings", a
 
 test("generated homepage has no trailing whitespace", async () => {
   build();
-  const html = await readFile("index.html", "utf8");
+  const html = await readFile("dist/index.html", "utf8");
   assert.doesNotMatch(html, /[ \t]+$/m);
 });
