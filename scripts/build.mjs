@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { loadContent, validateContent } from "./lib/content.mjs";
 import { createPages } from "./lib/pages.mjs";
@@ -16,3 +16,9 @@ for (const page of createPages(content)) {
   await mkdir(path.dirname(outputPath), { recursive: true });
   await writeFile(outputPath, page.html, "utf8");
 }
+
+await mkdir(path.join(rootDir, "css"), { recursive: true });
+await copyFile(
+  path.join(rootDir, "src", "css", "site.css"),
+  path.join(rootDir, "css", "site.css"),
+);

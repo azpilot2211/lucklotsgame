@@ -1,0 +1,207 @@
+{
+  "hero": {
+    "source": "art/feature.webp",
+    "width": 1024,
+    "height": 500,
+    "sizes": "(min-width: 900px) 50vw, 100vw",
+    "outputs": [
+      { "path": "art/optimized/hero-640.avif", "width": 640, "format": "avif" },
+      { "path": "art/optimized/hero-640.webp", "width": 640, "format": "webp" },
+      { "path": "art/optimized/hero-960.avif", "width": 960, "format": "avif" },
+      { "path": "art/optimized/hero-960.webp", "width": 960, "format": "webp" }
+    ]
+  },
+  "logo": {
+    "source": "art/logo.png",
+    "width": 720,
+    "height": 297,
+    "sizes": "(min-width: 900px) 280px, 220px",
+    "outputs": [
+      { "path": "art/optimized/logo-360.avif", "width": 360, "format": "avif" },
+      { "path": "art/optimized/logo-360.webp", "width": 360, "format": "webp" },
+      { "path": "art/optimized/logo-560.avif", "width": 560, "format": "avif" },
+      { "path": "art/optimized/logo-560.webp", "width": 560, "format": "webp" }
+    ]
+  },
+  "cardTable": {
+    "source": "art/shot-card_table.webp",
+    "width": 540,
+    "height": 960,
+    "sizes": "(min-width: 900px) 360px, 76vw",
+    "outputs": [
+      { "path": "art/optimized/card-table-360.avif", "width": 360, "format": "avif" },
+      { "path": "art/optimized/card-table-360.webp", "width": 360, "format": "webp" },
+      { "path": "art/optimized/card-table-540.avif", "width": 540, "format": "avif" },
+      { "path": "art/optimized/card-table-540.webp", "width": 540, "format": "webp" }
+    ]
+  },
+  "myLot": {
+    "source": "art/shot-my_lot.webp",
+    "width": 540,
+    "height": 960,
+    "sizes": "(min-width: 900px) 360px, 76vw",
+    "outputs": [
+      { "path": "art/optimized/my-lot-360.avif", "width": 360, "format": "avif" },
+      { "path": "art/optimized/my-lot-360.webp", "width": 360, "format": "webp" },
+      { "path": "art/optimized/my-lot-540.avif", "width": 540, "format": "avif" },
+      { "path": "art/optimized/my-lot-540.webp", "width": 540, "format": "webp" }
+    ]
+  },
+  "liveEvents": {
+    "source": "art/shot-live_events.webp",
+    "width": 540,
+    "height": 960,
+    "sizes": "(min-width: 900px) 360px, 76vw",
+    "outputs": [
+      { "path": "art/optimized/live-events-360.avif", "width": 360, "format": "avif" },
+      { "path": "art/optimized/live-events-360.webp", "width": 360, "format": "webp" },
+      { "path": "art/optimized/live-events-540.avif", "width": 540, "format": "avif" },
+      { "path": "art/optimized/live-events-540.webp", "width": 540, "format": "webp" }
+    ]
+  },
+  "rivalsShot": {
+    "source": "art/shot-rivals.webp",
+    "width": 540,
+    "height": 960,
+    "sizes": "(min-width: 900px) 360px, 76vw",
+    "outputs": [
+      { "path": "art/optimized/rivals-360.avif", "width": 360, "format": "avif" },
+      { "path": "art/optimized/rivals-360.webp", "width": 360, "format": "webp" },
+      { "path": "art/optimized/rivals-540.avif", "width": 540, "format": "avif" },
+      { "path": "art/optimized/rivals-540.webp", "width": 540, "format": "webp" }
+    ]
+  },
+  "prizeWheel": {
+    "source": "art/shot-prize_wheel.webp",
+    "width": 540,
+    "height": 960,
+    "sizes": "(min-width: 900px) 360px, 76vw",
+    "outputs": [
+      { "path": "art/optimized/prize-wheel-360.avif", "width": 360, "format": "avif" },
+      { "path": "art/optimized/prize-wheel-360.webp", "width": 360, "format": "webp" },
+      { "path": "art/optimized/prize-wheel-540.avif", "width": 540, "format": "avif" },
+      { "path": "art/optimized/prize-wheel-540.webp", "width": 540, "format": "webp" }
+    ]
+  },
+  "myCity": {
+    "source": "art/shot-my_city.webp",
+    "width": 540,
+    "height": 960,
+    "sizes": "(min-width: 900px) 360px, 76vw",
+    "outputs": [
+      { "path": "art/optimized/my-city-360.avif", "width": 360, "format": "avif" },
+      { "path": "art/optimized/my-city-360.webp", "width": 360, "format": "webp" },
+      { "path": "art/optimized/my-city-540.avif", "width": 540, "format": "avif" },
+      { "path": "art/optimized/my-city-540.webp", "width": 540, "format": "webp" }
+    ]
+  },
+  "marv": {
+    "source": "art/rival-marv.webp",
+    "width": 332,
+    "height": 420,
+    "sizes": "220px",
+    "outputs": [{ "path": "art/optimized/rival-marv.webp", "width": 332, "format": "webp" }]
+  },
+  "deb": {
+    "source": "art/rival-deb.webp",
+    "width": 360,
+    "height": 420,
+    "sizes": "220px",
+    "outputs": [{ "path": "art/optimized/rival-deb.webp", "width": 360, "format": "webp" }]
+  },
+  "grigsby": {
+    "source": "art/rival-grigsby.webp",
+    "width": 216,
+    "height": 420,
+    "sizes": "180px",
+    "outputs": [{ "path": "art/optimized/rival-grigsby.webp", "width": 216, "format": "webp" }]
+  },
+  "street": {
+    "source": "art/scene/street.webp",
+    "width": 1344,
+    "height": 768,
+    "sizes": "100vw",
+    "outputs": [
+      { "path": "art/optimized/street-640.avif", "width": 640, "format": "avif" },
+      { "path": "art/optimized/street-640.webp", "width": 640, "format": "webp" },
+      { "path": "art/optimized/street-960.avif", "width": 960, "format": "avif" },
+      { "path": "art/optimized/street-960.webp", "width": 960, "format": "webp" },
+      { "path": "art/optimized/street-1440.avif", "width": 1440, "format": "avif" },
+      { "path": "art/optimized/street-1440.webp", "width": 1440, "format": "webp" }
+    ]
+  },
+  "sceneBuilders": {
+    "source": "art/scene/keyframes/kf_0_builders.png",
+    "width": 1344,
+    "height": 768,
+    "sizes": "100vw",
+    "outputs": [
+      { "path": "art/optimized/scene-builders-640.avif", "width": 640, "format": "avif" },
+      { "path": "art/optimized/scene-builders-640.webp", "width": 640, "format": "webp" },
+      { "path": "art/optimized/scene-builders-960.avif", "width": 960, "format": "avif" },
+      { "path": "art/optimized/scene-builders-960.webp", "width": 960, "format": "webp" }
+    ]
+  },
+  "sceneBurglar": {
+    "source": "art/scene/keyframes/kf_1_burglar.png",
+    "width": 1344,
+    "height": 768,
+    "sizes": "100vw",
+    "outputs": [
+      { "path": "art/optimized/scene-burglar-640.avif", "width": 640, "format": "avif" },
+      { "path": "art/optimized/scene-burglar-640.webp", "width": 640, "format": "webp" },
+      { "path": "art/optimized/scene-burglar-960.avif", "width": 960, "format": "avif" },
+      { "path": "art/optimized/scene-burglar-960.webp", "width": 960, "format": "webp" }
+    ]
+  },
+  "sceneTruck": {
+    "source": "art/scene/keyframes/kf_2_truck.png",
+    "width": 1344,
+    "height": 768,
+    "sizes": "100vw",
+    "outputs": [
+      { "path": "art/optimized/scene-truck-640.avif", "width": 640, "format": "avif" },
+      { "path": "art/optimized/scene-truck-640.webp", "width": 640, "format": "webp" },
+      { "path": "art/optimized/scene-truck-960.avif", "width": 960, "format": "avif" },
+      { "path": "art/optimized/scene-truck-960.webp", "width": 960, "format": "webp" }
+    ]
+  },
+  "sceneParty": {
+    "source": "art/scene/keyframes/kf_3_party.png",
+    "width": 1344,
+    "height": 768,
+    "sizes": "100vw",
+    "outputs": [
+      { "path": "art/optimized/scene-party-640.avif", "width": 640, "format": "avif" },
+      { "path": "art/optimized/scene-party-640.webp", "width": 640, "format": "webp" },
+      { "path": "art/optimized/scene-party-960.avif", "width": 960, "format": "avif" },
+      { "path": "art/optimized/scene-party-960.webp", "width": 960, "format": "webp" }
+    ]
+  },
+  "sceneSky": {
+    "source": "art/scene/keyframes/kf_4_sky.png",
+    "width": 1344,
+    "height": 768,
+    "sizes": "100vw",
+    "outputs": [
+      { "path": "art/optimized/scene-sky-640.avif", "width": 640, "format": "avif" },
+      { "path": "art/optimized/scene-sky-640.webp", "width": 640, "format": "webp" },
+      { "path": "art/optimized/scene-sky-960.avif", "width": 960, "format": "avif" },
+      { "path": "art/optimized/scene-sky-960.webp", "width": 960, "format": "webp" }
+    ]
+  },
+  "cardBack": {
+    "source": "art/card-back.webp",
+    "width": 430,
+    "height": 645,
+    "sizes": "110px",
+    "outputs": [{ "path": "art/optimized/card-back.webp", "width": 430, "format": "webp" }]
+  },
+  "attackCard": {
+    "source": "art/attack-card.webp",
+    "width": 484,
+    "height": 645,
+    "sizes": "120px",
+    "outputs": [{ "path": "art/optimized/attack-card.webp", "width": 484, "format": "webp" }]
+  }
+}

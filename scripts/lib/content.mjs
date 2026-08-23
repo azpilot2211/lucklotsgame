@@ -7,11 +7,12 @@ async function readJson(rootDir, relativePath) {
 }
 
 export async function loadContent(rootDir) {
-  const [site, home] = await Promise.all([
+  const [site, home, assets] = await Promise.all([
     readJson(rootDir, "content/site.json"),
     readJson(rootDir, "content/home.json"),
+    readJson(rootDir, "content/assets.json"),
   ]);
-  return { site, home };
+  return { site, home, assets };
 }
 
 function requireText(value, field) {
