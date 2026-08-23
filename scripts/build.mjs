@@ -22,3 +22,8 @@ await copyFile(
   path.join(rootDir, "src", "css", "site.css"),
   path.join(rootDir, "css", "site.css"),
 );
+await mkdir(path.join(rootDir, "js"), { recursive: true });
+await copyFile(
+  path.join(rootDir, "src", "js", "main.js"),
+  path.join(rootDir, "js", "main.js"),
+);

@@ -27,6 +27,7 @@ export function renderLayout({ site, page, body, structuredData = [] }) {
   <meta property="og:image" content="${escapeHtml(image)}">${articleMeta}
   <link rel="icon" href="/art/icon-192.png">
   <link rel="apple-touch-icon" href="/art/icon-192.png">
+  <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="/css/site.css">
   ${schemas}
 </head>
@@ -52,6 +53,7 @@ export function renderLayout({ site, page, body, structuredData = [] }) {
       <nav aria-label="Legal"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="mailto:${escapeHtml(site.contactEmail)}">Contact</a></nav>
     </div>
   </footer>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
 `;

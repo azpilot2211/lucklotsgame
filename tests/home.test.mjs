@@ -55,7 +55,7 @@ test("homepage uses authentic optimized art without stale launch claims or frame
   assert.match(html, /\/art\/optimized\/rival-marv\.webp/);
   assert.doesNotMatch(html, /coming soon|no ads|test purchases are free/i);
   assert.doesNotMatch(html, /frames\/(?:desktop\/)?frame_/i);
-  assert.doesNotMatch(html, /<script src="\/js\/main\.js"/);
+  assert.match(html, /<script src="\/js\/main\.js" defer><\/script>/);
 });
 
 test("homepage structured data describes a free Android game without ratings", async () => {
