@@ -13,6 +13,9 @@
   --cream-200: #f7ead0;
   --coral-500: #c83f38;
   --coral-600: #a92f2a;
+  --pink-500: #ec5b87;
+  --purple-500: #7557d9;
+  --mint-400: #61d6ac;
   --green-500: #23885a;
   --ink: #10243a;
   --white: #ffffff;
@@ -139,7 +142,9 @@ p {
   position: relative;
   z-index: 20;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  background: var(--navy-950);
+  background:
+    linear-gradient(90deg, rgba(117, 87, 217, 0.18), transparent 35%, rgba(236, 91, 135, 0.14)),
+    var(--navy-950);
   color: var(--white);
 }
 
@@ -159,10 +164,17 @@ p {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 800;
   text-decoration: none;
+}
+
+.wordmark-logo {
+  width: clamp(7.5rem, 14vw, 10.5rem);
+  filter: drop-shadow(0 0.35rem 0.35rem rgb(0 0 0 / 28%));
 }
 
 .nav-toggle {
@@ -270,7 +282,9 @@ p {
 }
 
 .section-sky {
-  background: var(--sky-200);
+  background:
+    radial-gradient(circle at 14% 16%, rgba(255, 255, 255, 0.62), transparent 18%),
+    linear-gradient(135deg, #c9ecff, #bde6ff 48%, #d7f7ee);
 }
 
 .section-heading {
@@ -293,11 +307,38 @@ p {
   min-height: calc(100svh - 4.75rem);
   overflow: hidden;
   background:
-    radial-gradient(circle at 85% 10%, rgba(255, 214, 107, 0.38), transparent 30%),
-    linear-gradient(150deg, var(--sky-200), var(--cream-100) 56%, #f8dca5);
+    radial-gradient(circle at 88% 12%, rgba(255, 214, 107, 0.7), transparent 25%),
+    radial-gradient(circle at 8% 78%, rgba(97, 214, 172, 0.36), transparent 28%),
+    linear-gradient(145deg, #bdeaff, var(--cream-100) 50%, #ffdca0);
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.hero::before {
+  inset: 0;
+  opacity: 0.24;
+  background-image: radial-gradient(circle, var(--navy-700) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  mask-image: linear-gradient(90deg, #000, transparent 42%, #000);
+}
+
+.hero::after {
+  right: -4rem;
+  bottom: -5rem;
+  width: 16rem;
+  aspect-ratio: 1;
+  border: 2.5rem solid rgba(236, 91, 135, 0.22);
+  border-radius: 50%;
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 2.5rem;
   padding-block: clamp(3rem, 8vw, 6rem);
@@ -338,11 +379,46 @@ p {
 
 .hero-art {
   position: relative;
-  border: 5px solid var(--white);
+  border: 0.5rem solid var(--white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   overflow: clip;
-  transform: rotate(1.25deg);
+  outline: 0.22rem solid var(--gold-300);
+  outline-offset: 0.35rem;
+  transform: rotate(1.5deg);
+}
+
+.hero-art::before,
+.hero-art::after {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  border: 0.2rem solid var(--white);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 900;
+  content: "★";
+}
+
+.hero-art::before {
+  top: -0.7rem;
+  left: -0.8rem;
+  width: 3.4rem;
+  height: 4.6rem;
+  background: linear-gradient(145deg, var(--purple-500), #452f9c);
+  transform: rotate(-10deg);
+}
+
+.hero-art::after {
+  right: -0.65rem;
+  bottom: -0.75rem;
+  width: 3.2rem;
+  height: 4.4rem;
+  background: linear-gradient(145deg, var(--pink-500), var(--coral-600));
+  transform: rotate(9deg);
 }
 
 .hero-art img {
@@ -370,7 +446,8 @@ p {
 }
 
 .proof-strip {
-  background: var(--navy-900);
+  padding-block: 0.85rem;
+  background: linear-gradient(110deg, #4b2e9e, var(--navy-900) 45%, #0b5d61);
   color: var(--white);
 }
 
@@ -385,13 +462,45 @@ p {
 }
 
 .proof-list {
-  padding: 1.25rem 0;
-  margin: 0;
+  width: min(calc(100% - 2rem), var(--content));
+  padding: 0;
+  margin-block: 0;
+  margin-inline: auto;
   list-style: none;
 }
 
 .proof-list li {
   font-weight: 800;
+}
+
+.proof-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  line-height: 1.25;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.proof-icon {
+  display: grid;
+  flex: 0 0 2.25rem;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background: var(--gold-300);
+  box-shadow: 0 3px 0 #9c6100;
+  color: var(--navy-950);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 .loop-card,
@@ -403,6 +512,30 @@ p {
   border-radius: var(--radius-md);
   background: var(--white);
   box-shadow: var(--shadow-sm);
+}
+
+.loop-card {
+  position: relative;
+  border-top: 0.4rem solid var(--sky-500);
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.loop-card:nth-child(2) {
+  border-top-color: var(--mint-400);
+}
+
+.loop-card:nth-child(3) {
+  border-top-color: var(--pink-500);
+}
+
+.loop-card:nth-child(4) {
+  border-top-color: var(--purple-500);
+}
+
+.loop-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-0.35rem);
 }
 
 .loop-card,
@@ -429,6 +562,14 @@ p {
   display: grid;
   align-items: center;
   gap: clamp(2rem, 8vw, 6rem);
+}
+
+.feature-grid .feature-row {
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid rgba(13, 36, 64, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.54);
+  box-shadow: var(--shadow-sm);
 }
 
 .phone-frame {
@@ -460,7 +601,9 @@ p {
   padding: 1.25rem;
   border: 2px solid rgba(255, 214, 107, 0.75);
   border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, var(--navy-800), var(--navy-900));
+  background:
+    radial-gradient(circle at 50% 24%, rgba(117, 87, 217, 0.5), transparent 38%),
+    linear-gradient(180deg, var(--navy-800), var(--navy-900));
   box-shadow: var(--shadow-lg);
   overflow: clip;
   text-align: center;
@@ -499,6 +642,13 @@ p {
 .guide-card:hover,
 .article-card:hover {
   border-color: rgba(78, 170, 231, 0.7);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-0.2rem);
+}
+
+.guide-card,
+.article-card {
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .article-card time {
@@ -738,7 +888,9 @@ p {
   justify-items: start;
   padding: clamp(2rem, 7vw, 4rem);
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+  background:
+    radial-gradient(circle at 88% 20%, rgba(255, 214, 107, 0.2), transparent 26%),
+    linear-gradient(135deg, #3c2a82, var(--navy-900) 48%, #07545d);
   box-shadow: var(--shadow-lg);
   color: var(--cream-100);
   overflow: hidden;

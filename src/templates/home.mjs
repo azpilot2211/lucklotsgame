@@ -58,7 +58,11 @@ export function renderHome({ site, home, assets, articles = [] }) {
       <div class="hero-art">${renderPicture(hero, "Lucky Lots neighborhood and game characters", { priority: true })}</div>
     </div>
   </section>
-  <div class="proof-strip"><ul class="section-inner proof-list"><li>Three-card deals</li><li>Houses built stage by stage</li><li>Rivals, Cities, and live events</li></ul></div>
+  <div class="proof-strip"><ul class="section-inner proof-list">
+    <li class="proof-item"><span class="proof-icon" aria-hidden="true">3×</span><span>Three-card deals</span></li>
+    <li class="proof-item"><span class="proof-icon" aria-hidden="true">⌂</span><span>Houses built stage by stage</span></li>
+    <li class="proof-item"><span class="proof-icon" aria-hidden="true">VS</span><span>Rivals, Cities, and live events</span></li>
+  </ul></div>
   <section class="section" id="how-it-plays">
     <div class="section-inner">
       ${heading("The core loop", "One hand can change the whole block.", "Deal what you need, finish one more stage, protect what you built, and keep the street growing.")}

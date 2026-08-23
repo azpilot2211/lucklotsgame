@@ -35,7 +35,7 @@ export function renderLayout({ site, page, body, structuredData = [] }) {
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="/" aria-label="Lucky Lots home">${escapeHtml(site.shortName)}</a>
+      <a class="wordmark" href="/" aria-label="Lucky Lots home"><picture class="wordmark-logo"><source sizes="(min-width: 900px) 168px, 120px" srcset="/art/optimized/site-logo-240.avif 240w, /art/optimized/site-logo-360.avif 360w" type="image/avif"><source sizes="(min-width: 900px) 168px, 120px" srcset="/art/optimized/site-logo-240.webp 240w, /art/optimized/site-logo-360.webp 360w" type="image/webp"><img src="/art/optimized/site-logo-360.webp" alt="" width="360" height="173" decoding="async"></picture></a>
       <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span aria-hidden="true">Menu</span></button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
         <a href="/">Home</a>

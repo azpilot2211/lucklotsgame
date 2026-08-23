@@ -58,6 +58,16 @@ test("homepage uses authentic optimized art without stale launch claims or frame
   assert.match(html, /<script src="\/js\/main\.js" defer><\/script>/);
 });
 
+test("homepage adds a playful generated logo and structured hero badges", async () => {
+  build();
+  const html = await readFile("dist/index.html", "utf8");
+  assert.match(html, /class="proof-item"/);
+  assert.equal((html.match(/class="proof-item"/g) || []).length, 3);
+  assert.match(html, /class="proof-icon" aria-hidden="true"/);
+  assert.match(html, /class="wordmark-logo"/);
+  assert.match(html, /\/art\/optimized\/site-logo-360\.avif/);
+});
+
 test("homepage structured data describes a free Android game without ratings", async () => {
   build();
   const html = await readFile("dist/index.html", "utf8");

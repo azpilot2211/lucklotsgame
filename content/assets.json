@@ -12,15 +12,15 @@
     ]
   },
   "logo": {
-    "source": "art/logo.png",
-    "width": 720,
-    "height": 297,
-    "sizes": "(min-width: 900px) 280px, 220px",
+    "source": "art/higgsfield-logo-cropped.png",
+    "width": 1210,
+    "height": 580,
+    "sizes": "(min-width: 900px) 168px, 120px",
     "outputs": [
-      { "path": "art/optimized/logo-360.avif", "width": 360, "format": "avif" },
-      { "path": "art/optimized/logo-360.webp", "width": 360, "format": "webp" },
-      { "path": "art/optimized/logo-560.avif", "width": 560, "format": "avif" },
-      { "path": "art/optimized/logo-560.webp", "width": 560, "format": "webp" }
+      { "path": "art/optimized/site-logo-240.avif", "width": 240, "format": "avif" },
+      { "path": "art/optimized/site-logo-240.webp", "width": 240, "format": "webp" },
+      { "path": "art/optimized/site-logo-360.avif", "width": 360, "format": "avif" },
+      { "path": "art/optimized/site-logo-360.webp", "width": 360, "format": "webp" }
     ]
   },
   "cardTable": {

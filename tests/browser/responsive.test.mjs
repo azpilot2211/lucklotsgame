@@ -20,6 +20,17 @@ test("homepage fits target viewports with the mobile promise and action visible"
     await page.goto(`${server.baseUrl}/`, { waitUntil: "networkidle" });
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
     assert.ok(overflow <= 0, `${width}x${height} overflows by ${overflow}px`);
+    const proofItems = await page.locator(".proof-item").all();
+    assert.equal(proofItems.length, 3, `hero proof items missing at ${width}x${height}`);
+    const proofListBox = await page.locator(".proof-list").boundingBox();
+    assert.ok(proofListBox, `.proof-list missing at ${width}x${height}`);
+    const leftGutter = proofListBox.x;
+    const rightGutter = width - (proofListBox.x + proofListBox.width);
+    assert.ok(Math.abs(leftGutter - rightGutter) <= 1, `.proof-list gutters differ at ${width}x${height}: ${leftGutter}px / ${rightGutter}px`);
+    for (const item of proofItems) {
+      const box = await item.boundingBox();
+      assert.ok(box && box.x >= 0 && box.x + box.width <= width, `.proof-item escapes ${width}x${height}`);
+    }
     if (width <= 412) {
       for (const selector of ["h1", '[data-play-placement="hero"]']) {
         const box = await page.locator(selector).boundingBox();

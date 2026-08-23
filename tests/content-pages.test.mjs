@@ -79,15 +79,17 @@ test("shared legal pages preserve substantive protections while correcting stale
   assert.match(privacy, /Optional rewarded ads/);
   assert.match(privacy, /ask about deletion of any available cloud copy/);
   assert.doesNotMatch(privacy, /sends nothing off your device|never leave your device/i);
-  assert.match(privacy, /Last updated: August 1, 2026/);
+  assert.match(privacy, /Last updated: August 23, 2026/);
   assert.match(privacy, /Chat is for talking to other players about the game/);
   assert.match(terms, /The game is provided &quot;as is&quot;, without warranty of any kind/);
   assert.match(terms, /in-game item.*have no cash value/i);
-  assert.match(terms, /Last updated: July 11, 2026/);
+  assert.match(terms, /Last updated: August 23, 2026/);
   assert.match(terms, /Please don&#39;t decompile, modify, or redistribute the game or its assets/);
   assert.match(terms, /If these terms change in a way that matters, the update&#39;s store notes will say so/);
   const combined = `${privacy}\n${terms}`;
   assert.doesNotMatch(combined, /waitlist|no real-money purchases|don&#39;t operate accounts or servers|privacy-policy\.md/i);
+  assert.match(combined, /CapeCoder/);
+  assert.doesNotMatch(combined, /Michael Driggs/i);
 });
 
 test("content detail pages offer breadcrumbs and a useful next path", async () => {
