@@ -1,0 +1,148 @@
+{
+  "privacy": {
+    "path": "/privacy.html",
+    "title": "Lucky Lots: Card City — Privacy Policy",
+    "metaTitle": "Privacy Policy — Lucky Lots: Card City",
+    "description": "Read how Lucky Lots handles local saves, optional account data, online play, team chat, rewarded ads, analytics, diagnostics, and deletion requests.",
+    "updated": "August 1, 2026",
+    "intro": "Lucky Lots: Card City (\"the game\") is developed and published by Michael Driggs (\"we\", \"us\"). This policy describes what information the game handles.",
+    "sections": [
+      {
+        "heading": "The short version",
+        "paragraphs": [
+          "You can play without an account. Signing in is optional, and so is every ad — you only ever see one by choosing to watch it for a reward. Gameplay analytics and crash diagnostics are switched off unless you turn them on.",
+          "If you sign in, the game has online features: a shared player roster and a team chat room. Anything you type in chat is sent to our server and shown to other players. Optional ad, analytics, and diagnostics processing is described separately below."
+        ]
+      },
+      {
+        "heading": "Data the game stores on your device",
+        "items": [
+          "Save data — your game progress (houses, cards, tokens, rivals) saves in the app's private storage on your device first. Conditional cloud sync may upload a copy only when the build has cloud service enabled and you have a valid signed-in connection.",
+          "Local play statistics — anonymous counters (e.g. how many card deals or building stages you played per day), stored in the same private storage. If you enable supported analytics, gameplay event and counter data may also be sent as described below."
+        ],
+        "paragraphsAfter": [
+          "Clearing app data or uninstalling can remove the local copy of your progress. An unavailable cloud status is not cloud protection."
+        ]
+      },
+      {
+        "heading": "Optional account data",
+        "paragraphs": [
+          "You can play as a guest. If you choose to sign in, Firebase Authentication processes an account identifier, and the game may receive the display name and profile photo on the Google account you linked. Account linking is optional and the game is fully playable without it."
+        ]
+      },
+      {
+        "heading": "Online play and team chat",
+        "paragraphs": [
+          "These features run only when you are signed in. Guest and offline play uses none of them and sends nothing to our server."
+        ],
+        "items": [
+          "Player roster — so other players can find you as a rival, the game publishes your display name, your city name, your property value, your loose token count, and whether your shield and guard dog are active. This is gameplay state, not personal information, and it is replaced each time it updates.",
+          "Team chat — messages you send go to our server so other players can read them. Each message stores the text (up to 200 characters), the display name you chose, an account identifier, and the time it was sent. Anything you type in chat is public to other players — please do not put personal information in it. Messages are deleted automatically after seven days."
+        ],
+        "paragraphsAfter": [
+          "Chat is for talking to other players about the game. We may remove messages and restrict accounts that use it to harass others or to post unlawful content."
+        ]
+      },
+      {
+        "heading": "Optional rewarded ads",
+        "paragraphs": [
+          "The game shows a rewarded ad only when you choose Watch ad in exchange for a reward. Google Mobile Ads and Google's User Messaging Platform may process information needed to request, deliver, measure, prevent fraud in, and apply consent choices to that ad. Depending on your device and region this can include IP address, device or advertising identifiers, ad interactions, diagnostics, and your consent choices. Closing an ad before it finishes gives no reward."
+        ],
+        "links": [
+          { "label": "Google Privacy Policy", "href": "https://policies.google.com/privacy" },
+          { "label": "Google Mobile Ads SDK data-disclosure guidance", "href": "https://developers.google.com/admob/android/privacy/play-data-disclosure" }
+        ]
+      },
+      {
+        "heading": "Optional analytics and diagnostics",
+        "paragraphs": [
+          "The Settings privacy panel has separate controls for anonymous gameplay analytics and for crash diagnostics. Both are off until you choose to turn them on, and you can change them later. When enabled, Firebase Analytics may receive gameplay event and counter data, and Firebase Crashlytics may receive crash and diagnostic information, including the device and app details needed to work out what failed."
+        ]
+      },
+      {
+        "heading": "This website",
+        "paragraphs": [
+          "This website does not currently offer account registration, an email signup form, or an embedded Meta Pixel. It links to Google Play and can open your email app when you choose a contact link. The hosting provider may process routine request data such as an IP address, browser user agent, and request time to deliver and secure the site."
+        ]
+      },
+      {
+        "heading": "Permissions",
+        "items": [
+          "Notifications — used only for optional local reminders (e.g. your free deals are ready). These are scheduled on your device; nothing is sent to us. You can decline the permission or disable notifications at any time in system settings, and the game works fully without them."
+        ]
+      },
+      {
+        "heading": "Children",
+        "paragraphs": [
+          "The game is intended for a general audience and is not directed to children. It contains no real-money wagering. It does contain a team chat room where players type free text to each other, which is why it is not directed to children. Rewarded ads are optional and use a maximum ad-content rating of PG."
+        ]
+      },
+      {
+        "heading": "Data deletion",
+        "paragraphs": [
+          "Uninstalling the game removes everything stored on your device.",
+          "To delete the data held on our server — your roster profile and your chat messages — email azpilot@gmail.com from the address linked to your account, or include the Account ID shown in the game's Settings screen. We delete it within 30 days. Chat messages are also deleted automatically after seven days whether or not you ask. If cloud sync has uploaded progress, include your Account ID in the same message to ask about deletion of any available cloud copy."
+        ]
+      },
+      {
+        "heading": "Changes",
+        "paragraphs": [
+          "If a future update changes what data the game handles, this policy will be updated and the change noted in the update's store notes before it takes effect."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": ["Questions: azpilot@gmail.com"]
+      }
+    ],
+    "relatedLabel": "Terms of Service",
+    "relatedHref": "/terms.html"
+  },
+  "terms": {
+    "path": "/terms.html",
+    "title": "Lucky Lots: Card City — Terms of Service",
+    "metaTitle": "Terms of Service — Lucky Lots: Card City",
+    "description": "Read the Lucky Lots terms covering optional Google Play purchases, virtual items, saves, fair play, updates, and warranty limitations.",
+    "updated": "July 11, 2026",
+    "intro": "By downloading or playing Lucky Lots: Card City (\"the game\"), you agree to these terms.",
+    "sections": [
+      {
+        "heading": "The game",
+        "paragraphs": [
+          "Lucky Lots is a free casual game by Michael Driggs. It includes optional real-money in-app purchases processed by Google Play. There is no real-money gambling and no way to win or lose anything of real-world value. Tokens, cards, tickets, and every other in-game item exist only inside the game, have no cash value, and can't be sold, traded, or transferred outside it.",
+          "Optional in-app purchases are offered at the real price displayed before confirmation and are processed by Google Play. Review the item and price before approving a purchase. Payment, cancellation, and refund handling are also subject to the terms and policies of Google Play and applicable law."
+        ]
+      },
+      {
+        "heading": "Your save",
+        "paragraphs": [
+          "Game progress saves locally first. Clearing app data or uninstalling can remove that local copy. Cloud sync is conditional and requires a build with cloud service enabled plus a valid signed-in connection. An unavailable cloud status is not cloud protection, and we cannot promise that network or cloud services will always be available."
+        ]
+      },
+      {
+        "heading": "Fair play",
+        "paragraphs": [
+          "Please don't decompile, modify, or redistribute the game or its assets. The game and all its art, music, characters, and code are copyright Michael Driggs, all rights reserved."
+        ]
+      },
+      {
+        "heading": "No warranty",
+        "paragraphs": [
+          "The game is provided \"as is\", without warranty of any kind. We may update, change, or discontinue the game (or any feature of it) at any time. To the maximum extent permitted by law, we are not liable for any damages arising from your use of the game."
+        ]
+      },
+      {
+        "heading": "Changes to these terms",
+        "paragraphs": [
+          "If these terms change in a way that matters, the update's store notes will say so. Continuing to play after a change means you accept the new terms."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": ["Questions: azpilot@gmail.com"]
+      }
+    ],
+    "relatedLabel": "Privacy Policy",
+    "relatedHref": "/privacy.html"
+  }
+}

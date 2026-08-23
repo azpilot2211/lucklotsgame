@@ -126,8 +126,8 @@
       { "path": "art/optimized/street-640.webp", "width": 640, "format": "webp" },
       { "path": "art/optimized/street-960.avif", "width": 960, "format": "avif" },
       { "path": "art/optimized/street-960.webp", "width": 960, "format": "webp" },
-      { "path": "art/optimized/street-1440.avif", "width": 1440, "format": "avif" },
-      { "path": "art/optimized/street-1440.webp", "width": 1440, "format": "webp" }
+      { "path": "art/optimized/street-1440.avif", "width": 1344, "format": "avif" },
+      { "path": "art/optimized/street-1440.webp", "width": 1344, "format": "webp" }
     ]
   },
   "sceneBuilders": {

@@ -1,6 +1,9 @@
 import { renderLayout } from "../../src/templates/layout.mjs";
 import { renderHome } from "../../src/templates/home.mjs";
 import { renderGuideHub, renderGuidePage } from "../../src/templates/guide.mjs";
+import { renderNewsArticle, renderNewsIndex } from "../../src/templates/news.mjs";
+import { renderSupport } from "../../src/templates/support.mjs";
+import { renderLegal } from "../../src/templates/legal.mjs";
 
 function breadcrumbSchema(site, items) {
   return {
@@ -95,6 +98,110 @@ export function createPages(content) {
           { name: "Home", path: "/" },
           { name: "How to Play", path: "/how-to-play/" },
           { name: guide.title, path: guidePath },
+        ])],
+      }),
+      lastModified: "2026-08-22",
+    });
+  }
+
+  pages.push({
+    outputPath: "news/index.html",
+    canonicalPath: "/news/",
+    html: renderLayout({
+      site: content.site,
+      page: {
+        title: "Lucky Lots News — Game Updates & Fixes",
+        description: "Read verified Lucky Lots Android game updates, feature changes, and fixes from CapeCoder.",
+        path: "/news/",
+        image: "/art/optimized/street-960.webp",
+      },
+      body: renderNewsIndex({ articles: content.news }),
+      structuredData: [breadcrumbSchema(content.site, [
+        { name: "Home", path: "/" },
+        { name: "News", path: "/news/" },
+      ])],
+    }),
+    lastModified: content.news[0].modified,
+  });
+
+  for (const article of content.news) {
+    const image = `${content.site.origin}/art/optimized/street-960.webp`;
+    const articleSchema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: article.title,
+      datePublished: article.published,
+      dateModified: article.modified,
+      image,
+      author: { "@type": "Organization", name: content.site.developer },
+      publisher: { "@type": "Organization", name: content.site.developer },
+      mainEntityOfPage: new URL(article.href, `${content.site.origin}/`).href,
+    };
+    pages.push({
+      outputPath: `news/${article.slug}/index.html`,
+      canonicalPath: article.href,
+      html: renderLayout({
+        site: content.site,
+        page: {
+          title: `${article.title} — Lucky Lots News`,
+          description: article.excerpt,
+          path: article.href,
+          image: "/art/optimized/street-960.webp",
+          ogType: "article",
+          published: article.published,
+          modified: article.modified,
+        },
+        body: renderNewsArticle({ site: content.site, article, assets: content.assets }),
+        structuredData: [
+          breadcrumbSchema(content.site, [
+            { name: "Home", path: "/" },
+            { name: "News", path: "/news/" },
+            { name: article.title, path: article.href },
+          ]),
+          articleSchema,
+        ],
+      }),
+      lastModified: article.modified,
+    });
+  }
+
+  pages.push({
+    outputPath: "support/index.html",
+    canonicalPath: "/support/",
+    html: renderLayout({
+      site: content.site,
+      page: {
+        title: content.support.title,
+        description: content.support.description,
+        path: "/support/",
+        image: "/art/optimized/hero-960.webp",
+      },
+      body: renderSupport({ site: content.site, support: content.support }),
+      structuredData: [breadcrumbSchema(content.site, [
+        { name: "Home", path: "/" },
+        { name: "Support", path: "/support/" },
+      ])],
+    }),
+    lastModified: "2026-08-22",
+  });
+
+  for (const legal of [content.legal.privacy, content.legal.terms]) {
+    const label = legal.path === "/privacy.html" ? "Privacy Policy" : "Terms of Service";
+    pages.push({
+      outputPath: legal.path.slice(1),
+      canonicalPath: legal.path,
+      html: renderLayout({
+        site: content.site,
+        page: {
+          title: legal.metaTitle,
+          description: legal.description,
+          path: legal.path,
+          image: "/art/optimized/hero-960.webp",
+        },
+        body: renderLegal({ legal }),
+        structuredData: [breadcrumbSchema(content.site, [
+          { name: "Home", path: "/" },
+          { name: label, path: legal.path },
         ])],
       }),
       lastModified: "2026-08-22",

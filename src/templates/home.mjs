@@ -4,22 +4,8 @@ import {
   renderFaq,
   renderPicture,
   renderPlayCta,
+  toPictureAsset,
 } from "./components.mjs";
-
-function responsiveAsset(asset) {
-  const avif = asset.outputs.filter((item) => item.format === "avif");
-  const webp = asset.outputs.filter((item) => item.format === "webp");
-  const fallback = webp.at(-1) || avif.at(-1);
-  const scale = Math.min(fallback.width / asset.width, 1);
-  return {
-    src: `/${fallback.path}`,
-    avif: avif.map((item) => `/${item.path} ${item.width}w`).join(", ") || undefined,
-    webp: webp.map((item) => `/${item.path} ${item.width}w`).join(", ") || undefined,
-    width: Math.min(fallback.width, asset.width),
-    height: Math.round(asset.height * scale),
-    sizes: asset.sizes,
-  };
-}
 
 function heading(eyebrow, title, body = "") {
   const description = body ? `\n    <p>${escapeHtml(body)}</p>` : "";
@@ -30,7 +16,7 @@ function heading(eyebrow, title, body = "") {
 }
 
 export function renderHome({ site, home, assets, articles = [] }) {
-  const hero = responsiveAsset(assets.hero);
+  const hero = toPictureAsset(assets.hero);
   const heroProof = home.proof.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   const loop = home.loop.map((item, index) => `<li class="loop-card" data-reveal>
     <span class="step-number" aria-hidden="true">${index + 1}</span>
@@ -38,11 +24,11 @@ export function renderHome({ site, home, assets, articles = [] }) {
     <p>${escapeHtml(item.body)}</p>
   </li>`).join("");
   const features = home.features.map((item) => `<div class="feature-row${item.reversed ? " is-reversed" : ""}">
-    <div class="phone-frame" data-reveal>${renderPicture(responsiveAsset(assets[item.asset]), item.alt)}</div>
+    <div class="phone-frame" data-reveal>${renderPicture(toPictureAsset(assets[item.asset]), item.alt)}</div>
     <div class="feature-copy" data-reveal><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></div>
   </div>`).join("");
   const rivals = home.rivals.map((item) => `<figure class="rival-card" data-reveal>
-    ${renderPicture(responsiveAsset(assets[item.asset]), item.alt)}
+    ${renderPicture(toPictureAsset(assets[item.asset]), item.alt)}
     <figcaption><strong>${escapeHtml(item.name)}</strong><span>“${escapeHtml(item.quote)}”</span></figcaption>
   </figure>`).join("");
   const guides = home.guideTopics.map((item) => `<article class="guide-card" data-reveal>
@@ -93,7 +79,7 @@ export function renderHome({ site, home, assets, articles = [] }) {
   </section>
   <section class="section">
     <div class="section-inner feature-row">
-      <div class="phone-frame" data-reveal>${renderPicture(responsiveAsset(assets.prizeWheel), "The Lucky Lots Bonus Wheel")}</div>
+      <div class="phone-frame" data-reveal>${renderPicture(toPictureAsset(assets.prizeWheel), "The Lucky Lots Bonus Wheel")}</div>
       <div class="feature-copy" data-reveal>
         <p class="eyebrow">Bonus games & events</p>
         <h2>There’s always another way to win.</h2>
@@ -104,7 +90,7 @@ export function renderHome({ site, home, assets, articles = [] }) {
   </section>
   <section class="section section-sky">
     <div class="section-inner feature-row is-reversed">
-      <div class="phone-frame" data-reveal>${renderPicture(responsiveAsset(assets.myCity), "My City projects and team activity in Lucky Lots")}</div>
+      <div class="phone-frame" data-reveal>${renderPicture(toPictureAsset(assets.myCity), "My City projects and team activity in Lucky Lots")}</div>
       <div class="feature-copy" data-reveal>
         <p class="eyebrow">City play</p>
         <h2>Build with a City behind you.</h2>

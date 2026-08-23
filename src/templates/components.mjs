@@ -10,6 +10,22 @@ export function renderPlayCta({ site, label, placement, className = "" }) {
   })}>${escapeHtml(label)}</a>`;
 }
 
+export function toPictureAsset(asset) {
+  if (!asset?.outputs?.length) throw new Error("toPictureAsset requires optimized outputs");
+  const avif = asset.outputs.filter((item) => item.format === "avif");
+  const webp = asset.outputs.filter((item) => item.format === "webp");
+  const fallback = webp.at(-1) || avif.at(-1);
+  const scale = Math.min(fallback.width / asset.width, 1);
+  return {
+    src: `/${fallback.path}`,
+    avif: avif.map((item) => `/${item.path} ${item.width}w`).join(", ") || undefined,
+    webp: webp.map((item) => `/${item.path} ${item.width}w`).join(", ") || undefined,
+    width: Math.min(fallback.width, asset.width),
+    height: Math.round(asset.height * scale),
+    sizes: asset.sizes,
+  };
+}
+
 export function renderPicture(asset, alt, options = {}) {
   if (!asset?.src || !asset?.width || !asset?.height) {
     throw new Error("renderPicture requires src, width, and height");

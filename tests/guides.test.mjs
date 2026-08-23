@@ -79,3 +79,9 @@ test("each guide page has one h1, breadcrumbs, useful content before its Play CT
     assert.ok(html.indexOf("class=\"guide-sections\"") < html.indexOf("data-play-placement=\"guide"), slug);
   }
 });
+
+test("How to Play hub advertises a desktop image slot no wider than its CSS cap", async () => {
+  build();
+  const html = await readFile("how-to-play/index.html", "utf8");
+  assert.match(html, /class="guide-hero-art"><picture><source sizes="\(min-width: 900px\) 448px, calc\(100vw - 2rem\)"/);
+});

@@ -9,6 +9,9 @@ export function renderLayout({ site, page, body, structuredData = [] }) {
   const canonical = absoluteUrl(site, page.path);
   const image = absoluteUrl(site, page.image || "/art/feature.webp");
   const schemas = structuredData.map(jsonLd).join("\n  ");
+  const articleMeta = page.ogType === "article" ? `
+  <meta property="article:published_time" content="${escapeHtml(page.published)}">
+  <meta property="article:modified_time" content="${escapeHtml(page.modified)}">` : "";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -17,11 +20,11 @@ export function renderLayout({ site, page, body, structuredData = [] }) {
   <title>${escapeHtml(page.title)}</title>
   <meta name="description" content="${escapeHtml(page.description)}">
   <link rel="canonical" href="${escapeHtml(canonical)}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="${escapeHtml(page.ogType || "website")}">
   <meta property="og:title" content="${escapeHtml(page.title)}">
   <meta property="og:description" content="${escapeHtml(page.description)}">
   <meta property="og:url" content="${escapeHtml(canonical)}">
-  <meta property="og:image" content="${escapeHtml(image)}">
+  <meta property="og:image" content="${escapeHtml(image)}">${articleMeta}
   <link rel="icon" href="/art/icon-192.png">
   <link rel="apple-touch-icon" href="/art/icon-192.png">
   <link rel="stylesheet" href="/css/site.css">

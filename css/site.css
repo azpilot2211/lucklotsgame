@@ -228,12 +228,17 @@ p {
 }
 
 .eyebrow {
-  color: var(--coral-500);
+  color: var(--coral-600);
   font-family: var(--font-display);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+}
+
+.section-dark .eyebrow,
+.cta-panel .eyebrow {
+  color: var(--gold-300);
 }
 
 .section {
@@ -565,12 +570,6 @@ p {
   font-weight: 700;
 }
 
-.breadcrumbs li:not(:last-child)::after {
-  content: "/";
-  margin-left: 0.5rem;
-  color: var(--navy-400);
-}
-
 .guide-layout {
   display: grid;
   gap: clamp(2rem, 5vw, 4rem);
@@ -615,6 +614,79 @@ p {
 
 .related-guides {
   margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.article-header,
+.article-body,
+.legal-layout {
+  max-width: 60rem;
+}
+
+.article-dates {
+  color: var(--navy-700);
+  font-weight: 700;
+}
+
+.article-hero {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  border: 0.45rem solid var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: clip;
+}
+
+.article-hero img {
+  width: 100%;
+}
+
+.article-body {
+  font-size: 1.08rem;
+}
+
+.related-callout,
+.support-links {
+  padding: 1.5rem;
+  border: 1px solid var(--navy-200);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.related-callout h2 {
+  margin-top: 0;
+}
+
+.support-layout {
+  display: grid;
+  gap: clamp(2rem, 7vw, 5rem);
+  align-items: start;
+}
+
+.support-links {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.support-links h2 {
+  margin-bottom: 0.35rem;
+}
+
+.legal-hero {
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.legal-copy {
+  max-width: var(--reading);
+  margin-inline: auto;
+}
+
+.legal-copy > section {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--navy-200);
+}
+
+.legal-copy li::marker {
+  color: var(--coral-600);
 }
 
 .prose ul,
@@ -732,6 +804,10 @@ p {
 
   .guide-layout {
     grid-template-columns: minmax(13rem, 0.34fr) minmax(0, 1fr);
+  }
+
+  .support-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.42fr);
   }
 
   .local-toc {

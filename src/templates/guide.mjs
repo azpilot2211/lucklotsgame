@@ -1,20 +1,5 @@
 import { escapeHtml } from "../../scripts/lib/html.mjs";
-import { renderBreadcrumbs, renderPicture, renderPlayCta } from "./components.mjs";
-
-function responsiveAsset(asset) {
-  const avif = asset.outputs.filter((item) => item.format === "avif");
-  const webp = asset.outputs.filter((item) => item.format === "webp");
-  const fallback = webp.at(-1) || avif.at(-1);
-  const scale = Math.min(fallback.width / asset.width, 1);
-  return {
-    src: `/${fallback.path}`,
-    avif: avif.map((item) => `/${item.path} ${item.width}w`).join(", ") || undefined,
-    webp: webp.map((item) => `/${item.path} ${item.width}w`).join(", ") || undefined,
-    width: Math.min(fallback.width, asset.width),
-    height: Math.round(asset.height * scale),
-    sizes: asset.sizes,
-  };
-}
+import { renderBreadcrumbs, renderPicture, renderPlayCta, toPictureAsset } from "./components.mjs";
 
 function guideCard(guide) {
   return `<article class="guide-card">
@@ -26,6 +11,10 @@ function guideCard(guide) {
 }
 
 export function renderGuideHub({ guides, assets }) {
+  const heroAsset = {
+    ...assets.sceneBuilders,
+    sizes: "(min-width: 900px) 448px, calc(100vw - 2rem)",
+  };
   return `<section class="page-hero section-sky">
     <div class="section-inner page-hero-inner">
       <div>
@@ -34,7 +23,7 @@ export function renderGuideHub({ guides, assets }) {
         <h1>How to Play Lucky Lots</h1>
         <p class="lede">Deal three cards, bank useful rewards, build one house stage at a time, collect rent, and protect your street. Choose a topic for the exact rules.</p>
       </div>
-      <div class="guide-hero-art">${renderPicture(responsiveAsset(assets.sceneBuilders), "Builders working on a Lucky Lots neighborhood", { priority: true })}</div>
+      <div class="guide-hero-art">${renderPicture(toPictureAsset(heroAsset), "Builders working on a Lucky Lots neighborhood", { priority: true })}</div>
     </div>
   </section>
   <section class="section" aria-labelledby="guide-topics">
@@ -75,7 +64,7 @@ export function renderGuidePage({ site, guide, sections, guides, assets }) {
         <h1>${escapeHtml(guide.title)}</h1>
         <p class="lede">${escapeHtml(guide.description)}</p>
       </div>
-      <div class="guide-hero-art">${renderPicture(responsiveAsset(assets[guide.imageKey]), `${guide.title} gameplay in Lucky Lots`, { priority: true })}</div>
+      <div class="guide-hero-art">${renderPicture(toPictureAsset(assets[guide.imageKey]), `${guide.title} gameplay in Lucky Lots`, { priority: true })}</div>
     </div>
   </section>
   <section class="section">

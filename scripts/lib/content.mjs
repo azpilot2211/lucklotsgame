@@ -7,14 +7,26 @@ async function readJson(rootDir, relativePath) {
 }
 
 export async function loadContent(rootDir) {
-  const [site, home, assets, guides, ruleSource] = await Promise.all([
+  const [site, home, assets, guides, ruleSource, newsArticle, support, legal] = await Promise.all([
     readJson(rootDir, "content/site.json"),
     readJson(rootDir, "content/home.json"),
     readJson(rootDir, "content/assets.json"),
     readJson(rootDir, "content/guides.json"),
     readFile(path.join(rootDir, "content/how-to-play/source.txt"), "utf8"),
+    readJson(rootDir, "content/news/2026-08-21-my-block-update.json"),
+    readJson(rootDir, "content/support.json"),
+    readJson(rootDir, "content/legal.json"),
   ]);
-  return { site, home, assets, guides, ruleSections: parseRuleSections(ruleSource) };
+  return {
+    site,
+    home,
+    assets,
+    guides,
+    ruleSections: parseRuleSections(ruleSource),
+    news: [newsArticle].sort((left, right) => right.published.localeCompare(left.published)),
+    support,
+    legal,
+  };
 }
 
 const STALE_PURCHASE_SENTENCE = "Test purchases use the displayed price but are free until launch; no real money is charged.";
@@ -96,5 +108,14 @@ export function validateContent(content) {
   if (JSON.stringify(mappedSections) !== JSON.stringify(expectedSections)) {
     throw new Error("guides must map every How to Play section exactly once");
   }
+  for (const [index, article] of content.news.entries()) {
+    requireText(article.title, `news[${index}].title`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(article.published) || !/^\d{4}-\d{2}-\d{2}$/.test(article.modified)) {
+      throw new Error(`news[${index}] dates must use YYYY-MM-DD`);
+    }
+  }
+  requireText(content?.support?.description, "support.description");
+  requireText(content?.legal?.privacy?.title, "legal.privacy.title");
+  requireText(content?.legal?.terms?.title, "legal.terms.title");
   return content;
 }

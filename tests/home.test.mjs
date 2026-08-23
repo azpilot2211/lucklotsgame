@@ -34,6 +34,7 @@ test("homepage tells the complete conversion story in order", async () => {
     "There’s always another way to win.",
     "Build with a City behind you.",
     "Know exactly what every card and currency does.",
+    "Latest news",
     "Questions before your first deal?",
     "Your first empty lot is waiting.",
   ];
@@ -43,7 +44,7 @@ test("homepage tells the complete conversion story in order", async () => {
     assert.ok(index > previous, `${heading} is missing or out of order`);
     previous = index;
   }
-  assert.doesNotMatch(html, /Latest news/i);
+  assert.match(html, /href="\/news\/my-block-is-a-real-street\/"/);
 });
 
 test("homepage uses authentic optimized art without stale launch claims or frame requests", async () => {

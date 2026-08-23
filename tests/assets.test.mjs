@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { access, readFile, stat } from "node:fs/promises";
+import sharp from "sharp";
 
 async function loadManifest() {
   return JSON.parse(await readFile("content/assets.json", "utf8"));
@@ -28,6 +29,8 @@ test("optimized image outputs exist and stay within launch candidate budgets", a
     for (const output of asset.outputs) {
       const file = await stat(output.path);
       assert.ok(file.size > 0, `${output.path} is empty`);
+      const metadata = await sharp(output.path).metadata();
+      assert.equal(metadata.width, output.width, `${output.path} width descriptor must match the file`);
       if (key === "hero" && output.width <= 640) {
         assert.ok(file.size < 150 * 1024, `${output.path} exceeds 150 KB`);
       }
@@ -45,6 +48,7 @@ test("stylesheet includes accessibility and motion safeguards", async () => {
   assert.match(css, /min-height:\s*44px/);
   assert.doesNotMatch(css, /background-attachment:\s*fixed/);
   assert.doesNotMatch(css, /animation-timeline/);
+  assert.match(css, /\.section-dark\s+\.eyebrow,\s*\.cta-panel\s+\.eyebrow\s*\{[^}]*color:\s*var\(--gold-300\)/s);
 });
 
 test("every custom property reference has a declared value", async () => {

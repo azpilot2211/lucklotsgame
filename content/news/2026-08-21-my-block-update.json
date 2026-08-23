@@ -1,0 +1,20 @@
+{
+  "slug": "my-block-is-a-real-street",
+  "href": "/news/my-block-is-a-real-street/",
+  "title": "My Block is a real street now",
+  "category": "Game update",
+  "published": "2026-08-21",
+  "modified": "2026-08-21",
+  "displayDate": "August 21, 2026",
+  "excerpt": "Finished neighborhoods now appear as scrollable streets, alongside fixes for the Claw prize label and Team race banner.",
+  "imageKey": "street",
+  "body": [
+    "My Block now presents finished neighborhoods as scrollable streets, with house names on the road. Each property shows its real construction stage as you move along the block.",
+    "The Claw prize label no longer overlaps the house pile.",
+    "The Team race banner no longer cuts off its second line."
+  ],
+  "relatedGuide": {
+    "label": "Learn how building and rent work",
+    "href": "/how-to-play/building-and-rent/"
+  }
+}
