@@ -4,3 +4,6 @@
 .godot/
 .claude/
 .worktrees/
+node_modules/
+.lighthouseci/
+reports/
