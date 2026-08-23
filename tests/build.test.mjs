@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile, rm } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import { escapeHtml, attrs, jsonLd } from "../scripts/lib/html.mjs";
 import { validateContent } from "../scripts/lib/content.mjs";
@@ -33,21 +33,20 @@ test("validateContent names a missing required field", () => {
   );
 });
 
-test("build writes a deterministic non-public smoke page", async () => {
-  await rm("reports/build-smoke", { recursive: true, force: true });
+test("build writes a deterministic public homepage", async () => {
   const first = spawnSync(process.execPath, ["scripts/build.mjs"], {
     cwd: process.cwd(),
     encoding: "utf8",
   });
   assert.equal(first.status, 0, first.stderr);
-  const firstHtml = await readFile("reports/build-smoke/index.html", "utf8");
+  const firstHtml = await readFile("index.html", "utf8");
 
   const second = spawnSync(process.execPath, ["scripts/build.mjs"], {
     cwd: process.cwd(),
     encoding: "utf8",
   });
   assert.equal(second.status, 0, second.stderr);
-  const secondHtml = await readFile("reports/build-smoke/index.html", "utf8");
+  const secondHtml = await readFile("index.html", "utf8");
 
   assert.equal(secondHtml, firstHtml);
   assert.match(firstHtml, /<!doctype html>/);

@@ -49,7 +49,6 @@ export function renderLayout({ site, page, body, structuredData = [] }) {
       <nav aria-label="Legal"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="mailto:${escapeHtml(site.contactEmail)}">Contact</a></nav>
     </div>
   </footer>
-  <script src="/js/main.js" defer></script>
 </body>
 </html>
 `;

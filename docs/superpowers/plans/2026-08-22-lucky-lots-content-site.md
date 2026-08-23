@@ -451,7 +451,7 @@ assert.doesNotMatch(html, /coming soon|no ads|test purchases are free/i);
 assert.doesNotMatch(html, /frames\/(?:desktop\/)?frame_/i);
 ```
 
-Also assert the section heading order: core loop, gameplay proof, rivals, bonus/events, City play, guide preview, latest news, FAQ, and closing CTA.
+Also assert the section heading order: core loop, gameplay proof, rivals, bonus/events, City play, guide preview, FAQ, and closing CTA. Assert that Latest News is absent until Task 6 supplies a verified article.
 
 - [ ] **Step 2: Run the homepage tests and verify they fail**
 

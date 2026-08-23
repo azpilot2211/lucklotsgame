@@ -1,199 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lucky Lots: Card City — Deal cards. Build your block.</title>
-<meta name="description" content="Lucky Lots is a card-dealing neighborhood builder. Deal cards, raise houses stage by stage, and settle scores with rival builders. Coming soon to Google Play.">
-<meta property="og:title" content="Lucky Lots: Card City">
-<meta property="og:description" content="Deal cards, build your block, and settle scores with rival builders.">
-<meta property="og:image" content="art/feature.webp">
-<meta property="og:type" content="website">
-<meta name="google-site-verification" content="I7TY6rNXNxu-rYLY10NuLMAo5KIbRnIu2zSuCnOArvk" />
-<!-- Meta Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '2032204618182358'); fbq('track', 'PageView');</script><noscript> <img height="1" width="1" src="https://www.facebook.com/tr?id=2032204618182358&ev=PageView&noscript=1"/></noscript><!-- End Meta Pixel Code -->
-<link rel="icon" href="art/icon-192.png">
-<link rel="apple-touch-icon" href="art/icon-192.png">
-<link rel="preload" as="image" href="frames/desktop/frame_001.jpg" media="(min-width: 821px)">
-<link rel="preload" as="image" href="frames/frame_001.jpg" media="(max-width: 820px)">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=10">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lucky Lots: Card City Builder — Deal, Build &amp; Raid</title>
+  <meta name="description" content="Deal cards, build houses stage by stage, collect rent, and raid rivals in Lucky Lots: Card City Builder, live now on Google Play.">
+  <link rel="canonical" href="https://luckylotsgame.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lucky Lots: Card City Builder — Deal, Build &amp; Raid">
+  <meta property="og:description" content="Deal cards, build houses stage by stage, collect rent, and raid rivals in Lucky Lots: Card City Builder, live now on Google Play.">
+  <meta property="og:url" content="https://luckylotsgame.com/">
+  <meta property="og:image" content="https://luckylotsgame.com/art/feature.webp">
+  <link rel="icon" href="/art/icon-192.png">
+  <link rel="apple-touch-icon" href="/art/icon-192.png">
+  <link rel="stylesheet" href="/css/site.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":["VideoGame","MobileApplication"],"name":"Lucky Lots: Card City Builder","operatingSystem":"Android","applicationCategory":"GameApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://play.google.com/store/apps/details?id=com.luckylots.cardcity","publisher":{"@type":"Organization","name":"CapeCoder"}}</script>
 </head>
 <body>
-
-<!-- ============ HERO: scroll-scrubbed movie ============
-     Desktop scrubs the 15s Lucky Lots neighborhood movie (frames/desktop);
-     mobile scrubs the original portrait promo (frames/). One engine, two
-     frame sets, switched at 820px. -->
-<section class="scrub-track" id="hero"
-         data-desktop-dir="frames/desktop/" data-desktop-count="150"
-         data-mobile-dir="frames/" data-mobile-count="120">
-  <div class="scrub-sticky">
-    <canvas id="scrub-canvas" aria-label="Lucky Lots animated neighborhood movie" role="img"></canvas>
-
-    <div class="hero-hud" id="hero-hud">
-      <div class="scroll-hint" aria-hidden="true">
-        <span>scroll</span>
-        <div class="chev">&#9660;</div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="/" aria-label="Lucky Lots home">Lucky Lots</a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span aria-hidden="true">Menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/how-to-play/">How to Play</a>
+        <a href="/news/">News</a>
+        <a href="/support/">Support</a>
+      </nav>
+      <a class="play-cta header-cta" href="https://play.google.com/store/apps/details?id=com.luckylots.cardcity" target="_blank" rel="noopener noreferrer" data-play-placement="header">Google Play</a>
+    </div>
+  </header>
+  <main id="main"><section class="hero">
+    <div class="section-inner hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Live now on Android</p>
+        <h1>Deal cards. Build houses. Take the whole street.</h1>
+        <p class="lede">Every hand can bring building materials, Tickets, Tokens, Chips—or a chance to raid a rival. Turn an empty lot into a neighborhood that earns rent while you’re away.</p>
+        <div class="hero-actions">
+          <a class="play-cta" href="https://play.google.com/store/apps/details?id=com.luckylots.cardcity" target="_blank" rel="noopener noreferrer" data-play-placement="hero">Install free on Google Play</a>
+          <a class="secondary-cta" href="#how-it-plays">See how it plays <span aria-hidden="true">↓</span></a>
+        </div>
+        <ul class="hero-proof"><li>Free to play</li><li>Optional rewarded ads</li><li>Built for short sessions</li></ul>
+      </div>
+      <div class="hero-art"><picture><source sizes="(min-width: 900px) 50vw, 100vw" srcset="/art/optimized/hero-640.avif 640w, /art/optimized/hero-960.avif 960w" type="image/avif"><source sizes="(min-width: 900px) 50vw, 100vw" srcset="/art/optimized/hero-640.webp 640w, /art/optimized/hero-960.webp 960w" type="image/webp"><img src="/art/optimized/hero-960.webp" alt="Lucky Lots neighborhood and game characters" width="960" height="469" fetchpriority="high"></picture></div>
+    </div>
+  </section>
+  <div class="proof-strip"><ul class="section-inner proof-list"><li>Three-card deals</li><li>Houses built stage by stage</li><li>Rivals, Cities, and live events</li></ul></div>
+  <section class="section" id="how-it-plays">
+    <div class="section-inner">
+      <div class="section-heading" data-reveal>
+    <p class="eyebrow">The core loop</p>
+    <h2>One hand can change the whole block.</h2>
+    <p>Deal what you need, finish one more stage, protect what you built, and keep the street growing.</p>
+  </div>
+      <ol class="loop-grid"><li class="loop-card" data-reveal>
+    <span class="step-number" aria-hidden="true">1</span>
+    <h3>Deal</h3>
+    <p>Choose Standard, Big, or Mega and turn Tickets into a hand of three.</p>
+  </li><li class="loop-card" data-reveal>
+    <span class="step-number" aria-hidden="true">2</span>
+    <h3>Build</h3>
+    <p>Bank the cards and Tokens your active house needs, one construction stage at a time.</p>
+  </li><li class="loop-card" data-reveal>
+    <span class="step-number" aria-hidden="true">3</span>
+    <h3>Defend</h3>
+    <p>Protect finished lots with Shields and Guard Dogs when rivals come looking.</p>
+  </li><li class="loop-card" data-reveal>
+    <span class="step-number" aria-hidden="true">4</span>
+    <h3>Grow</h3>
+    <p>Collect rent, finish neighborhoods, and move on to your next destination.</p>
+  </li></ol>
+    </div>
+  </section>
+  <section class="section section-sky">
+    <div class="section-inner">
+      <div class="section-heading" data-reveal>
+    <p class="eyebrow">Authentic gameplay</p>
+    <h2>This is the game—not a mockup.</h2>
+    <p>Real screens show the hand you deal, the house you build, and the rival you choose.</p>
+  </div>
+      <div class="feature-grid"><div class="feature-row">
+    <div class="phone-frame" data-reveal><picture><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/card-table-360.avif 360w, /art/optimized/card-table-540.avif 540w" type="image/avif"><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/card-table-360.webp 360w, /art/optimized/card-table-540.webp 540w" type="image/webp"><img src="/art/optimized/card-table-540.webp" alt="Lucky Lots Card Table showing a three-card deal" width="540" height="960" loading="lazy" decoding="async"></picture></div>
+    <div class="feature-copy" data-reveal><h3>Deal three. Bank what matters.</h3><p>Every pull resolves into something useful: build cards, protection, Tickets, Tokens, Chips, jackpots, or mischief.</p></div>
+  </div><div class="feature-row is-reversed">
+    <div class="phone-frame" data-reveal><picture><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/my-lot-360.avif 360w, /art/optimized/my-lot-540.avif 540w" type="image/avif"><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/my-lot-360.webp 360w, /art/optimized/my-lot-540.webp 540w" type="image/webp"><img src="/art/optimized/my-lot-540.webp" alt="A house under construction on My Lot in Lucky Lots" width="540" height="960" loading="lazy" decoding="async"></picture></div>
+    <div class="feature-copy" data-reveal><h3>Build every house for real.</h3><p>Finish the foundation, walls, windows and doors, roof and chimney, then final touches. Your empty lot changes with every completed stage.</p></div>
+  </div><div class="feature-row">
+    <div class="phone-frame" data-reveal><picture><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/rivals-360.avif 360w, /art/optimized/rivals-540.avif 540w" type="image/avif"><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/rivals-360.webp 360w, /art/optimized/rivals-540.webp 540w" type="image/webp"><img src="/art/optimized/rivals-540.webp" alt="Choosing a rival action in Lucky Lots" width="540" height="960" loading="lazy" decoding="async"></picture></div>
+    <div class="feature-copy" data-reveal><h3>Raid, protect, and settle the score.</h3><p>Attack exposed properties, steal from rival doors, shield your street, and take revenge when an incoming report gives you the chance.</p></div>
+  </div></div>
+    </div>
+  </section>
+  <section class="section section-dark">
+    <div class="section-inner">
+      <div class="section-heading" data-reveal>
+    <p class="eyebrow">Meet the neighbors</p>
+    <h2>Nice street. Shame if a rival noticed.</h2>
+    <p>Marv, Deb, and Mr. Grigsby are building too—and they are not above helping themselves to your progress.</p>
+  </div>
+      <div class="rival-grid"><figure class="rival-card" data-reveal>
+    <picture><source sizes="220px" srcset="/art/optimized/rival-marv.webp 332w" type="image/webp"><img src="/art/optimized/rival-marv.webp" alt="Marv, a rival builder in Lucky Lots" width="332" height="420" loading="lazy" decoding="async"></picture>
+    <figcaption><strong>Marv</strong><span>“Nice lot. Shame if it got… renovated.”</span></figcaption>
+  </figure><figure class="rival-card" data-reveal>
+    <picture><source sizes="220px" srcset="/art/optimized/rival-deb.webp 360w" type="image/webp"><img src="/art/optimized/rival-deb.webp" alt="Deb Bulldozer, a rival builder in Lucky Lots" width="360" height="420" loading="lazy" decoding="async"></picture>
+    <figcaption><strong>Deb ‘Bulldozer’</strong><span>“I flatten more before 9am than you build all week.”</span></figcaption>
+  </figure><figure class="rival-card" data-reveal>
+    <picture><source sizes="180px" srcset="/art/optimized/rival-grigsby.webp 216w" type="image/webp"><img src="/art/optimized/rival-grigsby.webp" alt="Mr. Grigsby, a rival builder in Lucky Lots" width="216" height="420" loading="lazy" decoding="async"></picture>
+    <figcaption><strong>Mr. Grigsby</strong><span>“Every empty lot on this street will be mine.”</span></figcaption>
+  </figure></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner feature-row">
+      <div class="phone-frame" data-reveal><picture><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/prize-wheel-360.avif 360w, /art/optimized/prize-wheel-540.avif 540w" type="image/avif"><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/prize-wheel-360.webp 360w, /art/optimized/prize-wheel-540.webp 540w" type="image/webp"><img src="/art/optimized/prize-wheel-540.webp" alt="The Lucky Lots Bonus Wheel" width="540" height="960" loading="lazy" decoding="async"></picture></div>
+      <div class="feature-copy" data-reveal>
+        <p class="eyebrow">Bonus games & events</p>
+        <h2>There’s always another way to win.</h2>
+        <p>Spend Chips on the Bonus Wheel and mini-games, work through daily goals, and check live timers before joining limited-time events.</p>
+        <a href="/how-to-play/bonus-games/">Explore bonus games <span aria-hidden="true">→</span></a>
       </div>
     </div>
-
-    <div class="hero-endcap" id="hero-endcap">
-      <a class="cta-button" href="#features">See the game &#9660;</a>
+  </section>
+  <section class="section section-sky">
+    <div class="section-inner feature-row is-reversed">
+      <div class="phone-frame" data-reveal><picture><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/my-city-360.avif 360w, /art/optimized/my-city-540.avif 540w" type="image/avif"><source sizes="(min-width: 900px) 360px, 76vw" srcset="/art/optimized/my-city-360.webp 360w, /art/optimized/my-city-540.webp 540w" type="image/webp"><img src="/art/optimized/my-city-540.webp" alt="My City projects and team activity in Lucky Lots" width="540" height="960" loading="lazy" decoding="async"></picture></div>
+      <div class="feature-copy" data-reveal>
+        <p class="eyebrow">City play</p>
+        <h2>Build with a City behind you.</h2>
+        <p>Chat safely, request cards or Tokens, help with repairs and bail, fund projects, open City Chests, and compete together.</p>
+        <a href="/how-to-play/cities-and-events/">See how Cities work <span aria-hidden="true">→</span></a>
+      </div>
     </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-heading" data-reveal>
+    <p class="eyebrow">How to Play</p>
+    <h2>Know exactly what every card and currency does.</h2>
+    <p>Start with the core loop or jump straight to the rule you need.</p>
   </div>
-</section>
-
-<!-- ============ INTRO COPY ============ -->
-<section class="strip strip-dark" id="features">
-  <div class="wrap center">
-    <h2 class="reveal">Deal your way to the best block in town</h2>
-    <p class="lede reveal" data-delay="1">Every deal drops build crews, permits, shields — or trouble.
-    Stack your sets, raise houses stage by stage, and grow a street worth showing off.</p>
-    <div class="card-fan reveal" data-delay="2" aria-hidden="true">
-      <img src="art/card-back.webp" alt="" width="430" height="645" class="fan-card f1">
-      <img src="art/card-back.webp" alt="" width="430" height="645" class="fan-card f2">
-      <img src="art/attack-card.webp" alt="" width="484" height="645" class="fan-card f3">
-      <img src="art/card-back.webp" alt="" width="430" height="645" class="fan-card f4">
-      <img src="art/card-back.webp" alt="" width="430" height="645" class="fan-card f5">
+      <div class="guide-grid"><article class="guide-card" data-reveal>
+    <h3><a href="/how-to-play/cards-and-deals/">Cards &amp; deals</a></h3>
+    <p>Deal costs, Ticket recovery, card rewards, and the three currencies.</p>
+    <a href="/how-to-play/cards-and-deals/">Read this guide <span aria-hidden="true">→</span></a>
+  </article><article class="guide-card" data-reveal>
+    <h3><a href="/how-to-play/building-and-rent/">Building &amp; rent</a></h3>
+    <p>Construction stages, Property Value, repairs, rent, Shields, and Guard Dogs.</p>
+    <a href="/how-to-play/building-and-rent/">Read this guide <span aria-hidden="true">→</span></a>
+  </article><article class="guide-card" data-reveal>
+    <h3><a href="/how-to-play/rivals-and-jail/">Rivals &amp; jail</a></h3>
+    <p>Attacks, steals, capers, revenge, grudges, bail, and jail rules.</p>
+    <a href="/how-to-play/rivals-and-jail/">Read this guide <span aria-hidden="true">→</span></a>
+  </article><article class="guide-card" data-reveal>
+    <h3><a href="/how-to-play/bonus-games/">Bonus games</a></h3>
+    <p>Chips, the Bonus Wheel, Moving Day, prize rules, and unbanked pots.</p>
+    <a href="/how-to-play/bonus-games/">Read this guide <span aria-hidden="true">→</span></a>
+  </article><article class="guide-card" data-reveal>
+    <h3><a href="/how-to-play/cities-and-events/">Cities &amp; events</a></h3>
+    <p>Team help, City projects, goals, daily rewards, and limited-time events.</p>
+    <a href="/how-to-play/cities-and-events/">Read this guide <span aria-hidden="true">→</span></a>
+  </article><article class="guide-card" data-reveal>
+    <h3><a href="/how-to-play/shop-saves-safety/">Shop, saves &amp; safety</a></h3>
+    <p>Purchases, optional rewarded ads, profiles, local saves, cloud sync, and privacy.</p>
+    <a href="/how-to-play/shop-saves-safety/">Read this guide <span aria-hidden="true">→</span></a>
+  </article></div>
     </div>
+  </section>
+<section class="section section-sky">
+    <div class="section-inner">
+      <div class="section-heading" data-reveal>
+    <p class="eyebrow">Good to know</p>
+    <h2>Questions before your first deal?</h2>
   </div>
-</section>
-
-<!-- ============ FEATURE ROWS ============ -->
-<section class="strip strip-suburb">
-  <div class="wrap feature-row">
-    <div class="phone reveal reveal-left"><img src="art/shot-card_table.webp" alt="Dealing cards at the card table" width="540" height="960" loading="lazy"></div>
-    <div class="feature-copy reveal reveal-right">
-      <h3>DEAL</h3>
-      <p>Three cards, every pull does something — no dead draws. Build crews,
-      permits, shields, jackpots… and the occasional stick of dynamite.</p>
+      <div class="faq-list"><details><summary>Is Lucky Lots free to play?</summary><div class="faq-answer"><p>Yes. Lucky Lots is free to download and play on Android, with optional in-app purchases.</p></div></details><details><summary>Where can I download Lucky Lots?</summary><div class="faq-answer"><p>Lucky Lots: Card City Builder is live on Google Play.</p></div></details><details><summary>What are Tickets, Tokens, and Chips?</summary><div class="faq-answer"><p>Tickets pay for Card Table deals, Tokens pay game prices such as building and repairs, and Chips pay for the Bonus Wheel and mini-games.</p></div></details><details><summary>Are rewarded ads required?</summary><div class="faq-answer"><p>No. Rewarded ads are optional: watch one when you want the offered reward.</p></div></details><details><summary>Can I play in short sessions?</summary><div class="faq-answer"><p>Yes. Deal a few hands, move a house forward, collect rewards, and return when Tickets and rent have recovered.</p></div></details><details><summary>How does saving work?</summary><div class="faq-answer"><p>Progress saves locally first. Cloud sync is available only when the build, service, sign-in, and connection support it, so an unavailable cloud status is not cloud protection.</p></div></details><details><summary>Where can I read the full rules?</summary><div class="faq-answer"><p>Open the How to Play guide for exact rules covering cards, construction, rivals, bonus games, Cities, events, purchases, saves, and safety.</p></div></details></div>
     </div>
-  </div>
-  <div class="wrap feature-row flip">
-    <div class="phone reveal reveal-right"><img src="art/shot-my_lot.webp" alt="Building a house on My Lot" width="540" height="960" loading="lazy"></div>
-    <div class="feature-copy reveal reveal-left">
-      <h3>BUILD</h3>
-      <p>Raise houses stage by stage — foundation to landscaping — and watch
-      your street fill in. Finished houses earn while you're away.</p>
+  </section>
+  <section class="section section-dark">
+    <div class="section-inner cta-panel" data-reveal>
+      <p class="eyebrow">Live on Android</p>
+      <h2>Your first empty lot is waiting.</h2>
+      <p class="lede">Deal a few hands, finish your first foundation, and start turning one street into a city.</p>
+      <a class="play-cta" href="https://play.google.com/store/apps/details?id=com.luckylots.cardcity" target="_blank" rel="noopener noreferrer" data-play-placement="footer">Build your block on Google Play</a>
     </div>
-  </div>
-  <div class="wrap feature-row">
-    <div class="phone reveal reveal-left"><img src="art/shot-live_events.webp" alt="Live events hub" width="540" height="960" loading="lazy"></div>
-    <div class="feature-copy reveal reveal-right">
-      <h3>EVENTS AROUND THE CLOCK</h3>
-      <p>Rent Craze. Attack Madness. Vault Wheel. Weekend tournaments where you
-      race a rival to the finish. There's always something live.</p>
+  </section></main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Lucky Lots. Built by CapeCoder.</p>
+      <nav aria-label="Legal"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="mailto:azpilot@gmail.com">Contact</a></nav>
     </div>
-  </div>
-</section>
-
-<!-- ============ RIVALS ============ -->
-<section class="strip strip-dark rivals-strip">
-  <div class="wrap center">
-    <h2 class="reveal">You're not building alone</h2>
-    <p class="lede reveal" data-delay="1">Marv, Deb "Bulldozer," and Mr. Grigsby want your lots.
-    They'll raid your builds and skim your tokens while you're away.
-    Shield up — and when your grudge boils over, deliver the comeuppance they've earned.</p>
-    <div class="rival-row">
-      <figure class="rival reveal" data-delay="1">
-        <img src="art/rival-marv.webp" alt="Marv" width="332" height="420" loading="lazy">
-        <figcaption><strong>Marv</strong><span>"Nice lot. Shame if it got… renovated."</span></figcaption>
-      </figure>
-      <figure class="rival reveal" data-delay="2">
-        <img src="art/rival-deb.webp" alt='Deb "Bulldozer"' width="360" height="420" loading="lazy">
-        <figcaption><strong>Deb "Bulldozer"</strong><span>"I flatten more before 9am than you build all week."</span></figcaption>
-      </figure>
-      <figure class="rival reveal" data-delay="3">
-        <img src="art/rival-grigsby.webp" alt="Mr. Grigsby" width="216" height="420" loading="lazy">
-        <figcaption><strong>Mr. Grigsby</strong><span>"Every empty lot on this street will be mine."</span></figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MORE SHOTS ============ -->
-<section class="strip strip-suburb">
-  <div class="wrap feature-row">
-    <div class="phone reveal reveal-left"><img src="art/shot-rivals.webp" alt="Attacking a rival" width="540" height="960" loading="lazy"></div>
-    <div class="feature-copy reveal reveal-right">
-      <h3>RAID &amp; DEFEND</h3>
-      <p>Wreck a rival's build and pocket the repair bill. Guard your own block
-      with shields and guard dogs — or risk a caper and dodge jail.</p>
-    </div>
-  </div>
-  <div class="wrap feature-row flip">
-    <div class="phone reveal reveal-right"><img src="art/shot-prize_wheel.webp" alt="The prize wheel" width="540" height="960" loading="lazy"></div>
-    <div class="feature-copy reveal reveal-left">
-      <h3>SPIN &amp; WIN</h3>
-      <p>Feed tickets to the prize wheel, crack safes in the Vault Wheel event,
-      and smash open the Payday garden for buried loot.</p>
-    </div>
-  </div>
-  <div class="wrap feature-row">
-    <div class="phone reveal reveal-left"><img src="art/shot-my_city.webp" alt="My City projects" width="540" height="960" loading="lazy"></div>
-    <div class="feature-copy reveal reveal-right">
-      <h3>GROW A CITY</h3>
-      <p>Join a city, fund projects with your neighbors, swap cards with your
-      team, and race rival cities in the weekend Build-Off.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA ============ -->
-<section class="strip cta-strip" id="signup">
-  <div class="wrap center">
-    <img src="art/logo.png" alt="Lucky Lots" width="720" height="297" class="cta-logo reveal">
-    <p class="lede reveal" data-delay="1">Free to play. No ads. No account needed.</p>
-    <div class="play-badge reveal" data-delay="3">
-      <span class="badge-store"><a class="white" href="https://play.google.com/store/apps/details?id=com.luckylots.cardcity" target="_blank">Play on Google Play</a></span>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <p>&copy; 2026 LuckyLotsGame.com · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="mailto:azpilot@gmail.com">Contact</a></p>
-  </div>
-</footer>
-
-<script src="js/main.js?v=7"></script>
-<script>
-/* Waitlist signup → Web3Forms. Submits over fetch so the visitor never leaves
-   the page; on success we swap the form for a confirmation and fire the Meta
-   Pixel Lead event (pixel is already initialised in <head>). */
-(function () {
-  var form = document.getElementById("signup-form");
-  if (!form) return;
-  var msg = document.getElementById("signup-msg");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var btn = form.querySelector("button");
-    btn.disabled = true; btn.textContent = "Sending…";
-    msg.classList.remove("err");
-    fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify(Object.fromEntries(new FormData(form)))
-    }).then(function (r) { return r.json(); }).then(function (j) {
-      if (j.success) {
-        form.style.display = "none";
-        msg.innerHTML = "🎉 You're on the list! We'll email you the moment the test opens.";
-        msg.classList.add("ok");
-        if (window.fbq) fbq("track", "Lead");
-      } else {
-        btn.disabled = false; btn.textContent = "Notify me";
-        msg.textContent = "That didn't go through — please try again, or email azpilot@gmail.com.";
-        msg.classList.add("err");
-      }
-    }).catch(function () {
-      btn.disabled = false; btn.textContent = "Notify me";
-      msg.textContent = "Network hiccup — please try again in a moment.";
-      msg.classList.add("err");
-    });
-  });
-})();
-</script>
+  </footer>
 </body>
 </html>

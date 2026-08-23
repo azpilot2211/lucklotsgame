@@ -5,7 +5,7 @@ import { createPages } from "./lib/pages.mjs";
 
 const rootDir = process.cwd();
 const content = validateContent(await loadContent(rootDir));
-const outputDir = path.join(rootDir, "reports", "build-smoke");
+const outputDir = rootDir;
 
 for (const page of createPages(content)) {
   const outputPath = path.resolve(outputDir, page.outputPath);

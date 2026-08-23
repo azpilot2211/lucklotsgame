@@ -1,6 +1,43 @@
 {
   "title": "Lucky Lots: Card City Builder — Deal, Build & Raid",
   "description": "Deal cards, build houses stage by stage, collect rent, and raid rivals in Lucky Lots: Card City Builder, live now on Google Play.",
+  "eyebrow": "Live now on Android",
   "headline": "Deal cards. Build houses. Take the whole street.",
-  "subhead": "Every hand can bring building materials, Tickets, Tokens, Chips—or a chance to raid a rival. Turn an empty lot into a neighborhood that earns rent while you’re away."
+  "subhead": "Every hand can bring building materials, Tickets, Tokens, Chips—or a chance to raid a rival. Turn an empty lot into a neighborhood that earns rent while you’re away.",
+  "primaryCta": "Install free on Google Play",
+  "secondaryCta": "See how it plays",
+  "proof": ["Free to play", "Optional rewarded ads", "Built for short sessions"],
+  "loop": [
+    { "title": "Deal", "body": "Choose Standard, Big, or Mega and turn Tickets into a hand of three." },
+    { "title": "Build", "body": "Bank the cards and Tokens your active house needs, one construction stage at a time." },
+    { "title": "Defend", "body": "Protect finished lots with Shields and Guard Dogs when rivals come looking." },
+    { "title": "Grow", "body": "Collect rent, finish neighborhoods, and move on to your next destination." }
+  ],
+  "features": [
+    { "title": "Deal three. Bank what matters.", "body": "Every pull resolves into something useful: build cards, protection, Tickets, Tokens, Chips, jackpots, or mischief.", "asset": "cardTable", "alt": "Lucky Lots Card Table showing a three-card deal", "reversed": false },
+    { "title": "Build every house for real.", "body": "Finish the foundation, walls, windows and doors, roof and chimney, then final touches. Your empty lot changes with every completed stage.", "asset": "myLot", "alt": "A house under construction on My Lot in Lucky Lots", "reversed": true },
+    { "title": "Raid, protect, and settle the score.", "body": "Attack exposed properties, steal from rival doors, shield your street, and take revenge when an incoming report gives you the chance.", "asset": "rivalsShot", "alt": "Choosing a rival action in Lucky Lots", "reversed": false }
+  ],
+  "rivals": [
+    { "name": "Marv", "quote": "Nice lot. Shame if it got… renovated.", "asset": "marv", "alt": "Marv, a rival builder in Lucky Lots" },
+    { "name": "Deb ‘Bulldozer’", "quote": "I flatten more before 9am than you build all week.", "asset": "deb", "alt": "Deb Bulldozer, a rival builder in Lucky Lots" },
+    { "name": "Mr. Grigsby", "quote": "Every empty lot on this street will be mine.", "asset": "grigsby", "alt": "Mr. Grigsby, a rival builder in Lucky Lots" }
+  ],
+  "guideTopics": [
+    { "title": "Cards & deals", "body": "Deal costs, Ticket recovery, card rewards, and the three currencies.", "href": "/how-to-play/cards-and-deals/" },
+    { "title": "Building & rent", "body": "Construction stages, Property Value, repairs, rent, Shields, and Guard Dogs.", "href": "/how-to-play/building-and-rent/" },
+    { "title": "Rivals & jail", "body": "Attacks, steals, capers, revenge, grudges, bail, and jail rules.", "href": "/how-to-play/rivals-and-jail/" },
+    { "title": "Bonus games", "body": "Chips, the Bonus Wheel, Moving Day, prize rules, and unbanked pots.", "href": "/how-to-play/bonus-games/" },
+    { "title": "Cities & events", "body": "Team help, City projects, goals, daily rewards, and limited-time events.", "href": "/how-to-play/cities-and-events/" },
+    { "title": "Shop, saves & safety", "body": "Purchases, optional rewarded ads, profiles, local saves, cloud sync, and privacy.", "href": "/how-to-play/shop-saves-safety/" }
+  ],
+  "faq": [
+    { "question": "Is Lucky Lots free to play?", "answer": "Yes. Lucky Lots is free to download and play on Android, with optional in-app purchases." },
+    { "question": "Where can I download Lucky Lots?", "answer": "Lucky Lots: Card City Builder is live on Google Play." },
+    { "question": "What are Tickets, Tokens, and Chips?", "answer": "Tickets pay for Card Table deals, Tokens pay game prices such as building and repairs, and Chips pay for the Bonus Wheel and mini-games." },
+    { "question": "Are rewarded ads required?", "answer": "No. Rewarded ads are optional: watch one when you want the offered reward." },
+    { "question": "Can I play in short sessions?", "answer": "Yes. Deal a few hands, move a house forward, collect rewards, and return when Tickets and rent have recovered." },
+    { "question": "How does saving work?", "answer": "Progress saves locally first. Cloud sync is available only when the build, service, sign-in, and connection support it, so an unavailable cloud status is not cloud protection." },
+    { "question": "Where can I read the full rules?", "answer": "Open the How to Play guide for exact rules covering cards, construction, rivals, bonus games, Cities, events, purchases, saves, and safety." }
+  ]
 }

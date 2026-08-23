@@ -1,8 +1,23 @@
-import { escapeHtml } from "./html.mjs";
 import { renderLayout } from "../../src/templates/layout.mjs";
+import { renderHome } from "../../src/templates/home.mjs";
 
 export function createPages(content) {
-  const body = `<section><h1>${escapeHtml(content.home.headline)}</h1><p>${escapeHtml(content.home.subhead)}</p></section>`;
+  const body = renderHome({
+    site: content.site,
+    home: content.home,
+    assets: content.assets,
+    articles: content.news || [],
+  });
+  const applicationSchema = {
+    "@context": "https://schema.org",
+    "@type": ["VideoGame", "MobileApplication"],
+    name: content.site.name,
+    operatingSystem: "Android",
+    applicationCategory: "GameApplication",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    downloadUrl: content.site.playUrl,
+    publisher: { "@type": "Organization", name: content.site.developer },
+  };
   const html = renderLayout({
     site: content.site,
     page: {
@@ -12,7 +27,7 @@ export function createPages(content) {
       image: "/art/feature.webp",
     },
     body,
-    structuredData: [],
+    structuredData: [applicationSchema],
   });
   return [{
     outputPath: "index.html",
