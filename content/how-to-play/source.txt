@@ -8,32 +8,32 @@ Deal three cards, collect useful rewards, and finish houses one stage at a time.
 Choose Standard, Big, or Mega and deal a hand.
 Bank cards, Tickets, Tokens, and other rewards shown in the result.
 Open My Lot to build or repair the active house.
-Collect rent, protect your properties, and respond to rivals, goals, and events.
+Collect rent, protect your properties, and respond to rivals and goals.
 
-2. Your three currencies (and navigation)
-Three currencies run the game, and each has its own wallet and its own job. TICKETS deal cards: every hand at the Card Table costs Tickets, and they refill over time. TOKENS are your money: they pay for building, repairs, Shop offers, bail, attacks, and every other price on the map. CHIPS are bonus coins: they only pay for the Bonus Wheel and mini-games.
+2. Navigation and resources
+Use Cards for the Card Table, My Lot for construction, My Block for the neighborhood view, Bonus for the wheel and games, Goals and Daily Bonus for rewards, and Menu for My City, Team, Shop, Profile, Settings, and this guide.
 
 Tickets are Card Table energy. Tokens are the main spendable resource for building, repairs, Shop offers, bail, and other prices. Tokens never pay the Deal cost.
-Chips belong to Bonus Games. Property Value records construction progress and is not spendable. Your Card Album holds build, protection, mischief, collectible, and utility cards.
-Use Cards for the Card Table, My Lot for construction, My Block for the neighborhood view, Bonus for the wheel and games, Goals and Daily Bonus for rewards, and Menu for My City, Team, Events, Shop, Profile, Settings, and this guide.
+Chips belong to Bonus Games, and the Card Table and the Shop are the only two places they come from. Property Value records construction progress and is not spendable. Your Card Album holds build, protection, mischief, and utility cards, grouped into themed sets that pay Tokens when you complete one.
 The Progressive Jackpot and current jackpot tier appear on relevant jackpot gameplay surfaces. They describe jackpot progress, not spendable balances.
 All resources are virtual game items with no cash value. Gameplay buttons may still use the normal verb cash out when you bank a mini-game pot.
 
 3. Tickets, deals, and refills
-Every player starts with 125 Tickets. Standard, Big, and Mega deals cost 1, 3, and 9 Tickets. A deal never spends Tokens.
+Every player starts with 50 Tickets. Standard, Big, and Mega deals cost 1, 3, and 9 Tickets. A deal never spends Tokens.
 
-The recovery clock grants 50 Tickets plus 5 more for every completed neighborhood, every 25 minutes, regardless of your balance.
-While the game is active, recovery has no live wallet cap. One return from an away period can add at most 200 Tickets per away period; 200 is not a wallet cap.
-Earned Tickets are uncapped. Wheel, card, ad, and steal rewards do not reset the 25-minute recovery clock.
-The notification ‘Your Tickets have been replenished. Come play a hand!’ means the current away period has reached its 200-Ticket catch-up limit; it does not mean your wallet is full.
-Hold Deal when auto-deal is available. It stops safely for too few Tickets, jail, a full-screen result, an interruption, or another blocked hand.
+Natural recovery restores 5 Tickets every 5 minutes until you have 150 Tickets. Each redevelopment lap adds 5 to that refill and 25 to that ceiling, so a deeper lap holds more AND fills faster.
+Earned Tickets are uncapped. Wheel, card, ad, steal, purchase, refund and finished-house rewards can carry your wallet above 150; natural recovery never removes them.
+If you have more than 150 Tickets, natural recovery pauses until you spend below it. It preserves your current five-minute interval progress and never banks a delayed burst.
+The notification ‘Your Tickets have been replenished. Come play a hand!’ means your natural wallet has reached 150 Tickets; earned rewards can still exceed that number.
+Running out mid-session opens a refill card offering an ad; LATER closes it and you simply wait out the five-minute refill, which the card counts down for you. Hold Deal when auto-deal is available. It stops safely for too few Tickets, jail, a full-screen result, an interruption, or another blocked hand.
+The name of your bet — Standard, Big or Mega Deal — sits under the DEAL button. What a hand pays shows on the plate above the reels, with the details under the bet name until the next deal. The coin-payout sound plays only when you land three of a kind.
 
 4. Cards and immediate rewards
 Each dealt card resolves its listed purpose. Build and protection cards bank in the Card Album; specifically listed three-card combinations can open their matching action, while single cards may still advance meters or collections.
 
-A Golden Work Ticket immediately awards 1, 3, or 9 Tickets for each copy dealt on Standard, Big, or Mega. Multiple copies in one hand multiply that award and also remain banked.
-Every four City Permits auto-convert to one Chip. Every four Bonus Blueprints also auto-convert to one Chip. These set rewards stay flat at one Chip and do not scale with wager.
-A Chip conversion consumes those four cards and respects the 30 Chips limit. Open the Card Album to see current quantities, stage needs, and card descriptions.
+A Golden Work Ticket immediately awards 1, 3, or 9 Tickets for each copy dealt on Standard, Big, or Mega. Multiple copies in one hand multiply that award and also remain banked. A hand that wins Tickets pays no Tokens — the Tickets ARE the prize.
+A Bonus Chip immediately awards one Chip when dealt, auto-consumes, and never scales with wager.
+Chips cap at 25 at every redevelopment lap. A Chip reward that would pass the cap grants what fits, and the Chip-limit notice offers the Bonus Wheel so you can spend down and make room. Open the Card Album to see discoveries, stage needs, and card descriptions.
 A Ticket reward is Card Table energy; a Chip reward is Bonus currency. Their names and wallets are intentionally separate.
 
 Building
@@ -49,67 +49,124 @@ Finish Final Touches/Landscaping.
 
 Each stage spends the displayed build cards and Tokens. Foundation opens Pour Day; other stages use their shown construction skill check. A completed stage adds Property Value.
 Card requirements use a gentler bounded curve: no stage asks for more than 18 cards total. Example: with one Meadowgate house complete, the next Foundation needs 8 Foundation cards.
-That card ceiling does not discount direct Token construction prices. The same Meadowgate example still shows 15,200 Tokens. Later construction prices continue to scale, but no individual build stage costs more than 29,000 Tokens; event discounts can lower the displayed price.
-After Silverleaf Springs come Plumeria Bay, Coyote Mesa, and Seaglass Point. Each destination has six lots and keeps its own tropical, high-desert, or Cape-coast signature house style. These top-tier destinations share the capped base economy; later redevelopment laps continue progression.
+A house is priced in DEALS, not in a fixed Token number: a finished street costs about 200 card deals a house, and less than that while you are starting out. The Token figure on screen is always the one you pay, and every price in the game shows what it is worth in deals beside it. Event discounts can lower the displayed price.
+Short a build card? You can DEAL for it or BUY it in the Shop. A card costs what dealing for it would have paid, so buying never beats playing — it just skips the wait. This is what a big Token balance is for: Tokens buy build cards, build cards raise houses.
+After Silverleaf Springs come Plumeria Bay, Coyote Mesa, and Seaglass Point. Each destination has six lots and keeps its own tropical, high-desert, or Cape-coast signature house style. These top-tier destinations keep scaling: each costs more to build than the last, matching the rent it pays; later redevelopment laps continue progression.
 
 6. Rent, repair, and protection
-Completed homes store rent over time until their property cap. Collect one home or use Collect All when offered. Damage can reduce a property's usefulness until its listed repair is paid or helped.
+Rent is paid by the NEIGHBORHOOD, not by each house. Finish every lot on a street and it pays 100 Tokens an hour, forever, on top of every street you finished before it. A part-built street pays nothing, so the last house is worth as much as the first five. Rent banks itself and sweeps to your wallet once an hour — there is no Collect button. Damage can reduce a property's usefulness until its listed repair is paid or helped.
 
-Curb Appeal cards and completed-house upgrades improve the presentation and rewards described on their screens.
-Attach a Basic Shield or Guard Dog from the Card Album to an eligible lot. A shield blocks the next eligible damage part and is consumed; a Guard Dog can chase off an eligible attack outright.
+Every lot you build is exposed. An unguarded property can be attacked for damage, and an unguarded player can be robbed by a rival's steal or caper — while you are playing and while you are away. A Guard Dog is the only thing that answers theft, and it answers it completely: a dogged neighbourhood has nothing worth stealing. A Shield will not do that job; it stops damage, not thieves.
+
+Curb Appeal upgrades on a completed house improve its presentation. Finishing a house pays Deal Tickets three ways: the Open House gives 5, the new resident's House Warming Gift gives 5 more once you have hosted that Open House, and the Curb Showcase gives 5 plus Property Value once all three upgrades are bought. All three come back on the same lot on every redevelopment lap.
+Attach a Shield or Guard Dog from the Card Album to any lot. One defense covers EVERY lot in that neighborhood, not only the lot you attached it to. A NEIGHBOURHOOD holds at most 3 Shields at once — that is 3 for the whole street, wherever you attach them — and the Guard Dog keeps his own place beside them, so a full stack of Shields never locks the dog out. Defenses do NOT travel: anything still standing when you graduate stays behind on the street you left, so use them up before you finish a neighborhood.
+A Guard Dog stops theft, and it is the single best-value thing you can own. A caper against a dogged mark fails and the thief goes to jail. A Steal against a dogged mark finds nothing behind ANY of its five doors — the dog does not lower the odds, it removes the loot. A Shield stops attack damage instead. They do different jobs and neither covers the other.
+Each defense carries its own meter, and one attack only ever spends ONE block. A Basic Shield — the wheel wedge, the Shop two-pack and the card — blocks a single attack and is then gone, whatever size that attack was. A Property Shield blocks three attacks before it is used up for good. Stack them and they are spent one at a time, cheapest first, so three Basic Shields cover three attacks. A Guard Dog turns away three raids, then he is hungry and stops guarding until you feed him for 200 Tokens from My Block.
+A hungry dog is still yours; he just is not working. The rail badges FEED DOG until you do, and a hungry dog protects nothing in the meantime. Guard Dogs and Shields come from cards or the Shop.
+Building while your neighborhood has no Guard Dog and no Shield shows a one-time warning. You can still build; the risk is real either way.
+A lot under lien from a Mail Call tax bill keeps its place on the map and its Property Value, but it pays no rent and cannot be built on until the debt is cleared. Only one lot is ever under lien at a time, and a second unpaid bill adds to that debt rather than taking a second lot.
+You cannot start a new neighborhood while a lien is outstanding. Finish the street and the lien notice appears instead of the graduation ceremony — clear the debt and the ceremony is offered again straight away. Card deals are where the Tokens to clear it come from.
 Repair notices, My Lot, and Team repair help point back to damaged property. Finish repairs before continuing construction on that lot.
 Shop success receipts read ‘You purchased X for X amount’ using the real item and displayed cost. Continue Shopping closes the receipt and keeps you in the Shop.
 
 Rivals
 
 7. Rivals, steals, revenge, and jail
-Attacks target exposed property, Steal presents four shuffled doors, and capers trade a larger possible reward for a stated catch risk. Rival grudges build from clashes; a final player blow can trigger a comeuppance and reset that feud. Revenge appears from an eligible incoming report after the current full-screen action releases.
+Attacks target exposed property, Steal presents five shuffled doors — its Token Vault is the only way to take a rival's Tokens — and a caper is a ladder climb toward a 200-Ticket roof. Rival grudges build from clashes; a final player blow can trigger a comeuppance and reset that feud. Revenge appears from an eligible incoming report after the current full-screen action releases.
 
-A direct Small Attack costs 10,000 Tokens, Medium costs 25,000, and Heavy costs 50,000. A shield-blocked attack still spends the full price because the attack resolved; a Medium Attack earned from three Attack cards and Revenge are free.
-The Steal gold-stash door converts the nominal stolen amount to Chips at 100 nominal stolen Tokens per Chip, with at least one requested for any nonzero stash. The 30-Chip cap is honest: full or partial collection is reported and overflow is not silently granted.
-The Ticket Stash door awards 2 uncapped Card Table Tickets. The cop door can jail you; the dog door gives a short slam-the-door challenge.
-Three Jail cards or a basic steal catch use a 6-minute sentence. Caper sentences can be longer and are shown by that risk.
+Mischief only crosses city lines. Attacks, Steals, and capers can target players from OTHER cities only — everyone in your own city is a teammate, so they never appear in a target list and can never be hit. Pick a city knowing you are safe from the people inside it, and fair game to everyone outside it.
+
+A Guard Dog decides whether a Steal can pay at all. Rob a rival who has a dog with bars left and EVERY one of the five doors hides a cop or that dog — there is no prize on the row, and your pick only chooses how the run ends. Catch a rival without a dog and the prize doors are live. That is the whole reason to own one, and the reason to check who is undefended before you knock.
+
+A caper is not a gamble on luck, it is a read of the list — and its prize is the ladder, never Tokens. Each clean caper climbs the burglar one landing; the fifth clean caper puts him on the roof, where he takes the loot off the building for 200 Tickets, then he starts over on the street. Pick a mark with a Guard Dog and it catches you: the burglar falls to the landing below and you serve the caper jail sentence. You cannot see which marks have a dog — that is the gamble. A dog turns away three capers before it tires out until the next hour, and rivals re-arm their defenses hourly — so a mark that jailed you once may be wide open on your next visit. The list reshuffles every visit so no one player absorbs every hit.
+
+Attacks are priced against your own block, not a fixed number: a Small Attack costs about a quarter of what one of your houses costs, a Medium about half, and a Heavy about a whole house. The attack screen always shows the exact figure. A shield-blocked attack still spends the full price because the attack resolved; a Medium Attack earned from three Attack cards and Revenge are free.
+A landed attack pays you 65 Deal Tickets, whatever the mark is carrying — nothing comes out of their wallet, but their property still takes the damage. A shield-blocked hit pays no Tickets; it drops a smaller Token consolation out of the mark's wallet instead, and a mark with an empty wallet drops nothing.
+Against an undefended rival the five doors are one Token Vault, two Ticket Stashes, one Cash Stash and one cop. The Token Vault takes 3% of the rival's Tokens straight out of their wallet — the game's only Token theft. Each Ticket Stash awards exactly 25 Tickets, and the Cash Stash is a flat Token find that costs the mark nothing — its size is scaled to your next build cost and the door names the exact figure. You pick ONE door and all five are equally likely, so Tickets are the likeliest outcome at two-in-five, and the cop is a one-in-five risk.
+Against a rival holding a Guard Dog there is no prize door at all — all five are cops and dogs. A dog does not lengthen your odds, it removes the payout.
+The cop door means you're caught — straight to jail. The Guard Dog door starts a 1.5-second slam challenge: close it in time and leave empty-handed, or miss and pay the displayed hospital bill.
+Three Jail cards or a basic steal catch use a 6-minute sentence. A caper stopped by a guard dog carries a 15-minute sentence.
 While jailed you cannot deal, build, attack, steal, caper, take revenge, or spin the wheel. You may still collect income, repair, improve Curb Appeal, donate or trade normal cards, help or chat with the City, and play allowed non-offensive games.
 Wait out the timer, pay the displayed Token bail, roll up to three jail-dice attempts for doubles, use a Get Out of Jail card, or request eligible City bail help.
 
 More
 
-8. Chips, Bonus Wheel, and Moving Day
-Chips: {chip_balance}/30. You can hold up to 30 Chips. The Bonus Wheel costs one Chip per spin. Other bonus games show their own Basic, Boosted, or Jackpot Chip price before play.
+8. Chips, Bonus Hub, and Moving Day
+Chips cap at 25 — spend at the Bonus Wheel to make room for more. The Bonus Wheel costs one Chip per spin. Hydrant Hero and Circuit City start from the Bonus Hub for 1, 2, or 3 Chips at the displayed Basic, Boosted, or Jackpot tier. Balloon Sky Pop starts only when the wheel lands on its wedge.
 
-The exact wheel can land on Lose Spin (12%), Bail card (5%), 100 Tokens (15%), a one-Chip Free Spin (9%), Moving Day (10%), 250 Tokens (7%), Basic Shield (7%), 50 Tickets (12%), or 50 Tokens (23%). The fixed Token wedges are 50, 100, or 250 Tokens.
+Three Jackpot cards in one hand is the rarest hand in the game — about one deal in a thousand. It pays 300 Tickets on top of the Jackpot Bonus and the progressive pot. The old meter jackpot that used to pop up every few minutes is gone.
+
+Balloon Sky Pop is a wheel outcome, not a Bonus Hub card or a card trigger. Landing on its wedge starts a round with no Chip charge beyond the spin, and a finished round returns to the Bonus Wheel.
+Balloon Sky Pop gives you 20 seconds to tap fast-rising balloons. Balloons release one, two, or three at a time, and every balloon you pop pays exactly one Deal Ticket. The quicker balloons are no richer than the slow ones, they are only harder to catch. Balloons cannot be tapped while behind a cloud.
+The exact wheel can land on Lose Spin (12%), Bail card (5%), 100 Tokens (15%), a Free Spin that hands your Chip straight back so the next spin is free (9%), Moving Day (10%), 250 Tokens (7%), Basic Shield (7%), 90 Tokens (12%), Balloon Sky Pop (5%), or 10 Tokens (18%). The four fixed Token wedges pay 10, 90, 100 or 250 Tokens — exactly the number printed on the wedge.
 Every spin pays its normal one-Chip price. Lose Spin takes one additional Chip only when another Chip remains after that price; it never makes the wallet negative.
-The 50 Tickets result pays the uncapped Card Table Ticket wallet directly. It has no side-game route.
 Moving Day opens with its moving-box intro, then places nine labeled cartons naturally around a packed home, including BOOKS and DISHES. Eight boxes hold scaled Token prizes and one is broken.
 Each safe box adds to the unbanked pot. TAKE WINNINGS to cash out before the broken box erases that pot; finding every safe box banks automatically. Leaving an active round also forfeits the unbanked pot.
+Mail Call arrives on its own while you are dealing — you do not start it and it costs nothing. The mailman lays six letters on the counter and you open ONE of them. Whatever is inside is yours: a tax refund, the mayor's thanks in Deal Tickets, build cards, an insurance cheque that covers your outstanding repairs, or a letter meant for a neighbour that you may keep or return for City points. A CITY envelope is either the tax refund or a property tax bill — they look the same from outside, which is the whole risk. There is nothing to bank and nothing to push your luck on: one letter, and the round is done.
+A property tax bill is 100 Tokens for every property you own, so it grows as your portfolio does — and it cannot reach you at all until you have completed 3 houses. If the bill is bigger than your wallet, one lot you choose goes under lien for the shortfall plus 10% interest. Your last standing lot is never taken.
 Wheel and game outcomes are selected before their reveal animation. Progressive jackpot opportunities are never guaranteed, and queued interruptions wait until the current result flow releases.
 
-9. My City and Team
-Join a City to appear on its roster and use City and Team activities. Leaving removes membership and resets that City's shared chest and project state, while City Score already credited to your player remains.
+9. The Claw
+Land five special card trios and you earn a Claw Coin. The CLAW GAME button beside the card machine shows your progress toward the next coin, or how many coins you hold, and tapping it opens the machine. Spend a coin on The Claw: an arcade machine full of little plush houses. Attack, Golden Ticket, Steal, and Caper trios all count toward a coin. Ticket Tornado, Jail and Jackpot trios do not.
 
-Team supports safe canned chat, requests for Tokens or eligible common build cards, repair requests, and donations to teammate asks. Limits and cooldowns are shown on the request.
-Real contributions add City Score and can fund the active project, build-off, and City Chest. Claim a ready chest from its screen.
+Slide the joystick to move the claw over the house you want.
+Press DROP. The claw closes and either holds the house or lets it slip.
+If it holds, the house is yours to carry — walk it across to the chute.
+Press DROP IN over the chute and the house falls in and pays.
+
+The prizes are 25 Tickets, a Token stack, 60 Tickets, and a Get Out of Jail Free card. The Token stack is scaled to your next build cost, so it keeps its worth as you climb. Every house is equally hard to win: the machine holds on about 80% of the time, whichever one you go for. The machine is restocked every round, so which house is standing where changes each time you play a coin — there is no lucky spot to memorise.
+You must carry the house to the chute yourself. Let go anywhere else and the house drops back into the machine and is lost — so line up the chute before you press DROP IN.
+The grip can still give out while you are carrying. It wobbles first, and moving quickly can beat it. That is the machine, not a fault.
+A coin NEVER pays nothing. A miss, a slip, or a house dropped short still pays 10 loose Tickets.
+One play per coin: the coin is spent the moment the claw closes, so backing out after a grab does not give it back. Backing out before you press DROP costs nothing.
+Coins stack up, so you can save several and play them whenever you like.
+
+10. My City and Team
+Join a City to appear on its roster and use City and Team activities. Every City has its own neighbours, so the crew on your Team page changes with the City you are in. Leaving gives up your City Score along with that City's shared chest and project progress — score is earned in a City and it stays there.
+
+Every real player in your City gets their own row on the City Rankings board, however many of you there are — the seeded neighbours only fill the seats nobody has taken. The Mayor is whoever holds the most City Score in that City. Joining a new City starts you at zero, so you climb the board there from the bottom. If you tie a neighbour on score, a real player is always placed above a bot.
+Team chat and any open requests belong to the City you were in. Move City and you arrive to a clean board and that City's own chat room — nothing follows you across.
+Team supports real chat with other players (be kind — messages are visible to everyone), requests for Tokens or eligible common build cards, repair requests, and donations to teammate asks. Limits and cooldowns are shown on the request.
+Chat reads oldest to newest, so the newest message sits at the bottom right above the box you type in. Tap a teammate's message to report it or block that player; blocked players are listed in Settings, where you can unblock them. City teammates only ever REPLY there — a thank-you when you help them. Their own asks are not chat: they appear as cards on the City Rankings board, which is where you act on them.
+Real contributions add City Score and can fund the active project and City Chest. Claim a ready chest from its screen.
 Read the recipient, amount, card, and reward before helping; donated Tokens or cards leave your wallet or inventory.
 
-10. Goals, daily play, and events
+11. The Team Race
+Once a week your team races a rival team for 48 hours, and you score by catching burglars raiding your street. The board shows three running totals — your own score, your team's, and the rival team's — and every burglar you catch adds to the first two.
+
+Team Race cards drop from the card table ALL WEEK, and each one is a HAMMER. They stack with no cap, so bank them — a card you save now is a swing on race day.
+The race runs once a week for 48 hours, and it starts at a time you cannot look up in advance. Watch for the Race icon in the bottom bar, which appears a day ahead with a countdown on it, and turn on reminders to be told 30 minutes before the start.
+One hammer buys 10 burglars. There is no clock on a round — you play until your hammers run out, and a hammer is only spent when the first burglar pops, so leaving mid-round costs you nothing and keeps the points you already scored.
+A burglar pays 10 to 30, a burglar carrying a loot sack pays 150, and the COP costs you 75 — he is on your side, so leave him alone. The sign a burglar holds up is the loot you got back.
+BOTH teams are paid when the window closes, the winners more (the winning team collects 300 Tickets), but you must score at least 100 points yourself to collect anything at all.
+
+12. Goals and daily play
 The Foreman's Board tracks daily, weekly, and chapter goals. Claim a completed goal from its card unless its result explicitly says the reward was automatic.
 
 Daily Bonus shows the current login reward and streak. A qualifying absence may offer a separate comeback reward.
-Events and surprise Payday windows are time limited. Check the live timer, milestone, cost, and claim button before spending Tokens or keys.
-In-game badges can surface Ticket recovery, rent, jail, City activity, events, and other ready states. Supported device reminders cover Ticket away recovery and neighborhood comeback or attack news when permission is available.
+In-game badges can surface Ticket recovery, rent, jail, City activity, and other ready states. Supported device reminders cover Ticket away recovery and neighborhood comeback or attack news when permission is available.
 
-11. Shop, ads, and recovery
-The Shop offers text-labeled Token Packs and Ticket Packs alongside cards, Chips, shields, and utility packs. Test purchases use the displayed price but are free until launch; no real money is charged.
+13. Shop, ads, and recovery
+The Shop has For You, Tickets, Tokens, Chips, Defense, and Cards + Style sections. Every paid pack shows a guaranteed amount and price before purchase; no cash pack grants anything without a verified platform receipt.
 
-When you try to deal without enough Tickets, a centered recovery window offers Watch Ad for 200 Tickets or Purchase Tickets in the Shop. Ticket Packs are 100 for $1, 500 for $2, and 1,500 for $5; you can also trade 1,000 Tokens for 100 Tickets or 2,000 Tokens for 200 Tickets. Token Packs are 200 for $1, 500 for $2, and 1,500 for $5.
-The Shop and shortage modal can each offer Watch Ad for 200 Tickets. The separate invite reward can say Watch an ad for 25 Tickets. Only the matching earned-reward callback grants either reward, with at most 3 completed ads per UTC day shared by all ad offers. Closing, cancelling, failing, replaying a duplicate callback, or losing the ad before that callback grants nothing; the button can retry when loading is available.
-Tokens can come from card rewards, rent, Daily Bonus, goals, events, City or Team help, invites, jackpots, and mini-games. Tickets and Chips always go to their own wallets.
-Successful Shop receipts identify the item and amount paid. Continue Shopping closes the receipt without leaving the Shop.
+Ticket packs contain 50, 180, 350, or 800 Tickets for $0.99, $2.99, $4.99, or $9.99. Chip packs contain 10, 15, 20, or 45 Chips for $0.99, $1.50, $1.99, or $3.99.
+The Defense section sells 2 Basic Shield cards for a quarter of what one of your houses costs and a Guard Dog card for about a third; both bank in My Cards for you to attach. Every Token price in the Shop is shown before you buy. The $3.99 Guard Dog and Property Shield utility items arm instantly instead. Each armed defense covers your whole neighborhood until it blocks something, and stays behind on that street when you graduate.
+Token packs are scaled to what a whole house costs you right now: about 1x, 3.5x, 6.5x, or 15x, with a 200-Token minimum and amounts rounded up to the next 100. Each larger pack gives more build progress per dollar, and the resolved amount shown before purchase is the amount a valid receipt must grant. Every Token pack also shows what it is worth in card deals.
+The Welcome Builder Pack is a one-time offer: double the smallest pack's Tokens plus 50 Tickets, for the same $0.99. Once you buy it, it leaves the Shop for good.
+The Tickets and Tokens sections each offer a rewarded ad; Chips have no ad, and are earned at the Card Table or bought here. Ticket ads grant 100 Tickets per completed ad, with no more than five Ticket ads per UTC day; those earned Tickets may exceed the natural recovery cap. The Token ad grants a quarter of what one of your houses costs, with no more than three Token ads per UTC day.
+Only the matching earned callback grants an ad reward. Closing, cancelling, failing, or replaying the same callback grants nothing and does not spend a successful-view slot.
+Tokens can come from card rewards, rent, Daily Bonus, goals, City or Team help, invites, jackpots, and mini-games. Tickets and Chips always go to their own wallets — and every reward that once paid Chips now pays Tokens instead.
+The Shop sells build cards for Tokens at exactly what dealing for that card would have paid, so buying never beats playing. It will sell you one house's worth of build cards per UTC day and no more — Tokens speed the card hunt up, they never replace it. The counter resets at the same time every day.
+Finish Build appears when you are close to finishing a stage. It grants the whole stage: its full Token cost and every card it is still missing.
+Successful Shop receipts identify the item, amount, product, and displayed price. Continue Shopping closes the receipt without leaving the Shop.
 
-12. Profile, saves, and safety
-A guest uses the guest identity and grey avatar. Google sign-in can supply an account name and optional photo; signed-in players can save a custom display name or choose a preset avatar in Profile.
+14. Accounts, online economy, saves, and guest play
+Google-linked accounts use a protected online Token balance. Existing accounts preserve the exact latest valid cloud-saved balance and progression when they move to the secure economy; a linked account with no prior cloud save starts with 10,000 Tokens.
 
-A custom Profile name takes priority over the Google account name. Signing out returns to a guest identity and removes Google-only name and photo choices from the active profile.
-Progress always saves locally first. Clearing app data or uninstalling can remove that local copy.
-Cloud sync is conditional: only builds with cloud service enabled and a valid signed-in connection can upload. Settings may report syncing, pending, protected, offline, conflict, or unavailable; an unavailable status is not cloud protection.
+Signed-in Token spending and rewards require a connection. If the service is offline or under maintenance, your last confirmed balance remains visible but Token-changing actions pause until you reconnect; the game never guesses a payout or spend.
+Guest progress and Tokens stay only on this device. Guest and linked-account saves are separate and never merge, so signing in does not transfer or overwrite guest progress.
+Multiplayer, cloud backup, purchases, referrals, Cities, Teams, and the secure online economy require Google sign-in. Clearing app data or uninstalling can remove guest progress.
+A custom Profile name takes priority over the Google account name. Signing out returns to the separate guest slot; signing back in reloads the linked account's protected state.
+Required updates protect the shared economy by preventing older builds from changing balances or cross-player results.
 Privacy choices control supported ads and analytics. The guide describes game rules, not a promise that network, ad, purchase, or cloud services are always available.
+

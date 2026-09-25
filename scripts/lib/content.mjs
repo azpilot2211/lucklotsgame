@@ -65,9 +65,9 @@ export function parseRuleSections(text) {
   if (current) rawSections.push(current);
 
   const numbers = rawSections.map(({ number }) => number);
-  const expected = Array.from({ length: 12 }, (_, index) => index + 1);
-  if (numbers.length !== 12 || numbers.some((number, index) => number !== expected[index])) {
-    throw new Error(`How to Play must contain numbered sections 1 through 12 exactly once; found ${numbers.join(", ")}`);
+  const expected = Array.from({ length: 14 }, (_, index) => index + 1);
+  if (numbers.length !== 14 || numbers.some((number, index) => number !== expected[index])) {
+    throw new Error(`How to Play must contain numbered sections 1 through 14 exactly once; found ${numbers.join(", ")}`);
   }
 
   return rawSections.map(({ number, title, group, contentLines }) => {
@@ -104,7 +104,7 @@ export function validateContent(content) {
     throw new Error("guides must contain six topic mappings");
   }
   const mappedSections = content.guides.flatMap((guide) => guide.sourceSections).sort((a, b) => a - b);
-  const expectedSections = Array.from({ length: 12 }, (_, index) => index + 1);
+  const expectedSections = Array.from({ length: 14 }, (_, index) => index + 1);
   if (JSON.stringify(mappedSections) !== JSON.stringify(expectedSections)) {
     throw new Error("guides must map every How to Play section exactly once");
   }

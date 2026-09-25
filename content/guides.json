@@ -3,42 +3,62 @@
     "slug": "cards-and-deals",
     "title": "Cards & deals",
     "description": "Learn the core loop, currencies, Ticket recovery, deal costs, card rewards, and Card Album rules.",
-    "sourceSections": [1, 2, 3, 4],
+    "sourceSections": [
+      1,
+      2,
+      3,
+      4
+    ],
     "imageKey": "cardTable"
   },
   {
     "slug": "building-and-rent",
     "title": "Building & rent",
     "description": "Follow every construction stage and understand Property Value, rent, repairs, Shields, and Guard Dogs.",
-    "sourceSections": [5, 6],
+    "sourceSections": [
+      5,
+      6
+    ],
     "imageKey": "myLot"
   },
   {
     "slug": "rivals-and-jail",
     "title": "Rivals & jail",
     "description": "Understand attacks, steals, revenge, grudges, bail, jail restrictions, and ways to get free.",
-    "sourceSections": [7],
+    "sourceSections": [
+      7
+    ],
     "imageKey": "rivalsShot"
   },
   {
     "slug": "bonus-games",
     "title": "Bonus games",
-    "description": "See the Chip limit, exact Bonus Wheel outcomes, Moving Day rules, and when an unbanked pot is lost.",
-    "sourceSections": [8],
+    "description": "See the Chip limit, exact Bonus Wheel outcomes, Moving Day and Mail Call rules, and how The Claw pays.",
+    "sourceSections": [
+      8,
+      9
+    ],
     "imageKey": "prizeWheel"
   },
   {
     "slug": "cities-and-events",
     "title": "Cities & events",
-    "description": "Learn how Team help, City projects, goals, daily rewards, reminders, and limited-time events work.",
-    "sourceSections": [9, 10],
+    "description": "Learn how Team help, City projects, the weekly Team Race, goals, daily rewards, and reminders work.",
+    "sourceSections": [
+      10,
+      11,
+      12
+    ],
     "imageKey": "myCity"
   },
   {
     "slug": "shop-saves-safety",
     "title": "Shop, saves & safety",
     "description": "Rewarded ads are optional. Review purchase, recovery, profile, local-save, cloud-sync, and privacy rules.",
-    "sourceSections": [11, 12],
+    "sourceSections": [
+      13,
+      14
+    ],
     "imageKey": "liveEvents"
   }
 ]

@@ -6,17 +6,19 @@ import { parseRuleSections } from "../scripts/lib/content.mjs";
 
 const expectedTitles = [
   "Goal and core loop",
-  "Your three currencies (and navigation)",
+  "Navigation and resources",
   "Tickets, deals, and refills",
   "Cards and immediate rewards",
   "My Lot and construction",
   "Rent, repair, and protection",
   "Rivals, steals, revenge, and jail",
-  "Chips, Bonus Wheel, and Moving Day",
+  "Chips, Bonus Hub, and Moving Day",
+  "The Claw",
   "My City and Team",
-  "Goals, daily play, and events",
+  "The Team Race",
+  "Goals and daily play",
   "Shop, ads, and recovery",
-  "Profile, saves, and safety",
+  "Accounts, online economy, saves, and guest play",
 ];
 
 async function sourceSections() {
@@ -31,10 +33,10 @@ function build() {
   assert.equal(result.status, 0, result.stderr);
 }
 
-test("strict parser returns the 12 authoritative numbered sections", async () => {
+test("strict parser returns the 14 authoritative numbered sections", async () => {
   const sections = await sourceSections();
-  assert.equal(sections.length, 12);
-  assert.deepEqual(sections.map(({ number }) => number), Array.from({ length: 12 }, (_, index) => index + 1));
+  assert.equal(sections.length, 14);
+  assert.deepEqual(sections.map(({ number }) => number), Array.from({ length: 14 }, (_, index) => index + 1));
   assert.deepEqual(sections.map(({ title }) => title), expectedTitles);
   assert.ok(sections.every(({ paragraphs, listItems }) => paragraphs.length > 0 && listItems.length > 0));
 });
@@ -42,11 +44,11 @@ test("strict parser returns the 12 authoritative numbered sections", async () =>
 test("guide mapping includes every source section exactly once", async () => {
   const guides = JSON.parse(await readFile("content/guides.json", "utf8"));
   const mapped = guides.flatMap(({ sourceSections }) => sourceSections).sort((a, b) => a - b);
-  assert.deepEqual(mapped, Array.from({ length: 12 }, (_, index) => index + 1));
+  assert.deepEqual(mapped, Array.from({ length: 14 }, (_, index) => index + 1));
   assert.equal(new Set(guides.map(({ slug }) => slug)).size, 6);
 });
 
-test("generated guide library preserves critical gameplay facts and removes only the stale launch claim", async () => {
+test("generated guide library preserves critical gameplay facts and matches the current in-game guide", async () => {
   build();
   const pages = [
     "how-to-play/index.html",
@@ -59,12 +61,11 @@ test("generated guide library preserves critical gameplay facts and removes only
   ];
   const html = (await Promise.all(pages.map((page) => readFile(`dist/${page}`, "utf8")))).join("\n");
   assert.match(html, /Standard, Big, and Mega deals cost 1, 3, and 9 Tickets/);
-  assert.match(html, /You can hold up to 30 Chips/);
-  assert.match(html, /A direct Small Attack costs 10,000 Tokens/);
-  assert.match(html, /Rewarded ads are optional/);
-  assert.match(html, /Clearing app data or uninstalling can remove that local copy/);
-  assert.match(html, /Cloud sync is conditional/);
-  assert.match(html, /Lucky Lots is live\. The Shop displays real prices/);
+  assert.match(html, /Chips cap at 25/);
+  assert.match(html, /a Small Attack costs about a quarter of what one of your houses costs/);
+  assert.match(html, /The Tickets and Tokens sections each offer a rewarded ad/);
+  assert.match(html, /Clearing app data or uninstalling can remove guest progress/);
+  assert.match(html, /Google-linked accounts use a protected online Token balance/);
   assert.doesNotMatch(html, /free until launch|no real money is charged|coming soon|no ads/i);
 });
 

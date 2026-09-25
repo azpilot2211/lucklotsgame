@@ -14,7 +14,7 @@
     { "title": "Grow", "body": "Collect rent, finish neighborhoods, and move on to your next destination." }
   ],
   "features": [
-    { "title": "Deal three. Bank what matters.", "body": "Every pull resolves into something useful: build cards, protection, Tickets, Tokens, Chips, jackpots, or mischief.", "asset": "cardTable", "alt": "Lucky Lots Card Table showing a three-card deal", "reversed": false },
+    { "title": "Deal three. Bank what matters.", "body": "Every pull resolves into something useful: build cards, protection, Tickets, Tokens, Chips, jackpots, or mischief.", "asset": "cardTable", "alt": "The Lucky Lots Card Table slot machine, ready to deal three cards", "reversed": false },
     { "title": "Build every house for real.", "body": "Finish the foundation, walls, windows and doors, roof and chimney, then final touches. Your empty lot changes with every completed stage.", "asset": "myLot", "alt": "A house under construction on My Lot in Lucky Lots", "reversed": true },
     { "title": "Raid, protect, and settle the score.", "body": "Attack exposed properties, steal from rival doors, shield your street, and take revenge when an incoming report gives you the chance.", "asset": "rivalsShot", "alt": "Choosing a rival action in Lucky Lots", "reversed": false }
   ],
